@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/CarAdd.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderManage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderModify.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/addCar.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+					<li><a href="#"><i>修改用户信息</i></a></li>
+					<li><a href="#"><i>邮件集体分发</i></a></li>
+
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+					<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+					<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+					<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+					<li><a href="/Car/CarModify"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper" style="background: #fff">
+		    	<div class="page-wrapper-main" style="height: auto">
+		    		<h1>新增车辆信息</h1>
+					   <form method="post" action="CarAdd_action"  id="CarAdd_action" enctype="multipart/form-data">
+							<div class="addCar-showIfo">
+								<ul>
+									<li class="addCar-One" style="height: 200px;">
+										<span class="addCar-head">图片信息</span>
+										<div class="addCar-Pic">
+											 <span class="yulan">预览图片效果:</span>
+											 <div class="addCar-show" id="preview">
+												<!--<img src="images/klz.jpg"/>-->
+											 </div>
+											 <div class="addCar-show-right">
+												<div class="addCar-show-right-top">
+													<span class="add-headtop">设置该车的照片</span>
+													<span class="add-headtop1">
+														请选择一个新的照片进行上传编辑<br/>
+														头像保存后，您可能需要更新一下本页面（按F5），才能查看最新的头像效果
+													</span>
+												</div>
+												<input type="file" id="addCar-pibuton" name="img" value="上传照片" onchange="preview(this)"/>
+											 </div>
+										</div>
+									</li>
+									<li class="addCar-Two" style="height: 200px; margin-top: 30px;">
+										<span class="addCar-head">基本信息</span>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="pp">&nbsp;</b>
+												 品  &nbsp;&nbsp;牌：
+												<input name="Car_Brand" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="cx">&nbsp;</b>
+												 车  &nbsp;&nbsp;系：
+												<input name="Car_Type" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="ndk">&nbsp;</b>
+												 年代款：
+												<input name="Car_Year" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="pzk">&nbsp;</b>
+												 配置款：
+												<input name="Car_Configuration" type="text"/>
+											</div>
+										</div>
+									</li>
+									<li class="addCar-Three" style="height: 620px; margin-top: 20px; float: left;">
+										<span class="addCar-head">配置信息</span>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="zw">&nbsp;</b>
+												 座位数：
+												<input name="Car_SeatNum" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="cm">&nbsp;</b>
+												 车门数：
+												<input name="Car_Door" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="rll">&nbsp;</b>
+												 燃&nbsp;&nbsp;&nbsp;料：
+												<input name="Car_Fuel" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="bsx">&nbsp;</b>
+												 变速箱：
+												<input name="Car_Gearcase" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="pl">&nbsp;</b>
+												 排&nbsp;&nbsp;量：
+												<input name="Car_pailiang" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="ryh">&nbsp;</b>
+												 燃油号：
+												<input name="Car_FuelNum" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="qd">&nbsp;</b>
+												驱&nbsp;&nbsp;动：
+												<input name="Car_Drive" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="fdj">&nbsp;</b>
+												 发动机进气形式：
+												<input  name="Car_Engine" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="tc">&nbsp;</b>
+												天&nbsp;&nbsp;窗：
+												<input name="Car_Skylight" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="yxrl">&nbsp;</b>
+												 邮箱容量：
+												<input  name="Car_Tank" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="yx">&nbsp;</b>
+												音&nbsp;&nbsp;箱：
+												<input   name="Car_Voicebox" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="zy">&nbsp;</b>
+												 座&nbsp;&nbsp;椅：
+												<input  name="Car_SeatSort" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="dxld">&nbsp;</b>
+												倒车雷达：
+												<input name="Car_Reversing" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="qn">&nbsp;</b>
+												 气&nbsp;&nbsp;囊：
+												<input name="Car_Gasbag" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="dvd">&nbsp;</b>
+												DVD/CD：
+												<input  name="Car_Music" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="gps">&nbsp;</b>
+												 GPS导航：
+												<input type="text" name="Car_GPS"/>
+											</div>
+										</div>
+									</li>
+									<li class="addCar-Four" style="height: 200px; background: #fff; margin-top: 20px; float: left;">
+										<span class="addCar-head">价格信息</span>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="zw">&nbsp;</b>
+												 促销价格：
+												<input type="text" name="Car_Price"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="zw">&nbsp;</b>
+												 页面标题：
+												<input type="text" name="Car_DetailNa"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="pp">&nbsp;</b>
+												车辆价格：
+												<input  name="Car_OriPri" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="pp">&nbsp;</b>
+												车辆名称：
+												<input type="text" name="Car_Name"/>
+											</div>
+										</div>
+
+									</li>
+
+								</ul>
+							</div>
+							<div class="addcCargraybutbox" style="background: #fff;">
+								<a href="javascript:void(0);" style="float: left;" id="submitbut">确认增加</a>
+							</div>
+		    	       </form>
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>

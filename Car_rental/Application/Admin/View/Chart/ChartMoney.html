@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/ChartMoney.css"/>
+		<!--下面是插件JS（数据表的插件）-->
+		<script src="http://admin.car_rental.com/js/ChartMoney.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://admin.car_rental.com/js/jQuery.js"></script>
+		<script type="text/javascript" src="http://admin.car_rental.com/js/jqplot.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+					<li><a href="#"><i>修改用户信息</i></a></li>
+					<li><a href="#"><i>邮件集体分发</i></a></li>
+
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+					<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+					<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+					<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+					<li><a href="/Car/CarManage"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper">
+		    	<div class="page-wrapper-main">
+		    		<h1>订单总额统计</h1>
+		    		<div class="chart-main">
+		    			<div class="seacrh-line-inner">
+							<span>Search:</span>
+							<select class="chooseSe1" name="method">
+								<option selected="selected">请选择您要统计的年份</option>
+								<option >2015-2016年</option>
+								<option >2016-2017年</option>
+								<option >2017-2018年</option>
+								<option >2018-2019年</option>
+							</select>
+							<select class="chooseSe2" name="method">
+								<option selected="selected">请选择您要统计的季度</option>
+								<option >第一季度</option>
+								<option >第二季度</option>
+								<option >第三季度</option>
+								<option >第四季度</option>
+							</select>
+							<input type="button" value="查询" class="submitInput" id="submitBut" onclick="searchBut()"/>
+                            <div class="choosechart">
+                            	<a href="javascript:void(0)" id="zhexian" class="chart-a">折线图</a>
+                            	<a href="javascript:void(0)" id="zhuxing"  class="chart-a">柱形图</a>
+                            	<a href="javascript:void(0)" id="xiangxi" class="chart-a">详细表</a>
+                            </div>
+		    	    	</div>
+						<div id="chart3"  class="Chart_xian" ></div>
+						<div id="chart4" class="Chart_shu"   ></div>
+						<div id="chart1"  class="Chart_xian" style="margin-top: -400px"></div>
+		    		    <div id="chart2" class="Chart_shu"   style="margin-top: -400px"></div>
+		    		    <div class="table-main">
+		    		    	<table class="table-t" border="1" cellspacing="" cellpadding="" >
+		    		    		<tr>
+		    		    			<th style="width: 220px; text-align: center;">类型\月份</th>
+		    		    			<th style="width: 200px;" >第 一 月 份</th>
+		    		    			<th style="width: 200px;" > 第 二 月 份</th>
+		    		    			<th style="width: 200px;" >第 三 月 份</th>
+		    		    			<th>总 数</th>
+		    		    			
+		    		    		</tr>
+		    		    		<tr>
+		    		    			<td>订单总额</td>
+		    		    			<td>5000</td>
+		    		    			<td>6666</td>
+		    		    			<td>3333</td>
+		    		    			<td>3333</td>
+		    		    		</tr>
+		    		    		<tr>
+		    		    			<td>总订单数</td>
+		    		    			<td>86</td>
+		    		    			<td>55</td>
+		    		    			<td>39</td>
+		    		    			<td>39</td>
+		    		    		</tr>
+		    		    		<tr>
+		    		    			<td>总成功订单数</td>
+		    		    			<td>86</td>
+		    		    			<td>55</td>
+		    		    			<td>39</td>
+		    		    			<td>39</td>
+		    		    		</tr>
+		    		    		<tr>
+		    		    			<td>总取消订单数</td>
+		    		    			<td>86</td>
+		    		    			<td>55</td>
+		    		    			<td>39</td>
+		    		    			<td>39</td>
+		    		    		</tr>
+		    		    	</table>
+		    		    </div>
+			    	</div>
+
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>

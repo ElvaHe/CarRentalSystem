@@ -1,0 +1,476 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	color: #333;
+    background-color: #fff;
+}
+#page_bd{
+	position: relative;
+    height: 0;
+    font-size: 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+.page_title{
+	font-weight: bold;
+	font-size: 24px;
+    color: #eeb81a;
+    position: absolute;
+    top: 17px;
+    left: 215px;
+    z-index: 12;
+    line-height: 28px;
+}
+#head_bd{
+	width: 100%;
+    height: 58px;
+    border-top: 2px solid #eeb81a;
+    background-color: #1b2b3b;
+}
+.zc-main{
+	height: 58px;
+    z-index: 11;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.zc_logo{
+	display: block;
+    width: 211px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 58px;
+    background: url(../img/logo.png) no-repeat;
+    z-index: 10;
+    cursor: pointer;
+    color: #6ab0ff;
+    text-decoration: none;
+}
+.zc_box{
+	width: 100%;
+    min-width: 1200px;
+    background-color: #f2f3f5;
+    padding: 60px 0;
+}
+.zc_inbox{
+	
+	width: 1198px;
+    height: 558px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #eceef0;
+}
+.reg_l{
+	
+	width: 634px;
+    float: left;
+    padding: 40px 0 0 50px;
+}
+.reg_left_title{
+	padding: 0px;
+	margin: 0px;
+	font-weight:bold ;
+	display: block;
+	font-size: 24px;
+    color: #2f2f39;
+    line-height: 36px;
+    margin-bottom: 26px;
+}
+ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.zc_iptbox{
+	margin-bottom: 9px;
+	position: relative;
+}
+.rstar{
+	position: absolute;
+    left: -12px;
+    top: 12px;
+    color: #ff8650;
+    vertical-align: middle;
+}
+.zc_iptbox label {
+    position: absolute;
+    left: 1px;
+    top: 2px;
+    z-index: 9;
+    width: 34px;
+    height: 37px;
+    text-align: center;
+    background-color: #fff;
+}
+.zc_iptbox label span{
+	margin-top: 8px;
+}
+.zc_iuser{
+	width: 14px;
+    height: 20px;
+    display: inline-block;
+    background: url(../img/icon_new.png) no-repeat 0 -50px;
+}
+.zc-ipt{
+	border: 1px solid rgb(233, 235, 238);
+    color: rgb(147, 147, 158);
+    width: 273px;
+    display: inline-block;
+    height: 20px;
+    color: #93939e;
+    font-size: 13px;
+    padding: 9px 0 9px 35px;
+}
+.zc_idtm{
+	width: 16px;
+    height: 20px;
+    display: inline-block;
+    background: url(../img/icon_new.png) no-repeat -160px -50px;
+}
+.zc_ipsw{
+	width: 16px;
+    height: 20px;
+    display: inline-block;
+    background: url(../img/icon_new.png) no-repeat -40px -50px;
+}
+.input-erreg{
+	visibility: hidden;
+	display: block;
+	font-family: arial;
+	font-size: 12px;
+	top: 0;
+    left: 320px;
+    margin-left: 8px;
+    z-index: 21;
+    position: absolute;
+    width: 288px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #dadadf;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,.25);
+    margin: 0;
+    padding: 0;
+}
+.arrowbox{
+	position: absolute;
+    top: 50%;
+    margin-top: -19px;
+    left: -10px;
+    width: 18px;
+    height: 25px;
+    color: #dadadf;
+    font-size: 20px;
+    font-family: SimSun;
+    line-height: 38px;
+}
+.arrow{
+	position: absolute;
+    height: 25px;
+    color: #fff;
+    top: 0;
+    left: 1px;
+    font-size: 20px;
+    font-family: SimSun;
+    line-height: 38px;
+}
+
+.zc-retan{
+	margin-left: 10px;
+	text-align: -webkit-match-parent;
+	vertical-align: middle;
+	line-height: 38px;
+	display: inline-block;
+	width: 17px;
+    height: 17px;
+    background: url(../img/icon_new.png) -440px 0 no-repeat;
+}
+.zc-close{
+	line-height: 38px;
+	display: inline-block;
+	position: absolute;
+    top: 14px;
+    right: 10px;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    background: url(../img/icon_new.png) -480px 0 no-repeat;
+}
+.input-erreg i{
+	display: inline-block;
+    padding-left: 10px;
+    font: 13px/1.5 Helvetica,"Microsoft yahei",Arial,Verdana,SimHei,sans-serif;
+    vertical-align: middle;
+    font-style: normal;
+    color: #60606c;
+}
+.lfwtk{
+    font-size: 12px;
+    color: #60606c;
+    padding-left: 12px;
+    margin-bottom: 30px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.zc-rayes{
+	float: left;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+    padding: 0;
+    font-size: 12px;
+}
+.lfwtk span{
+	margin-top: 10px;
+	float: left;
+	display: block;
+	margin-left: 12px;
+}
+.lfwtk a{
+	margin-top: 10px;
+	float: left;
+	line-height: 17px;
+	text-decoration: none;
+	font-size: 12px ;
+	margin-left: 12px;
+	cursor: pointer;
+    color: #6ab0ff;
+}
+.zc-btn{
+	font-family:arial ;
+	position: relative;
+	margin-top: 60px;
+	text-decoration: none;
+	width: 310px;
+	text-align: center;
+    background-color: #fabe00;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    font-family: "Microsoft YaHei";
+    cursor: pointer;
+}
+.reg-r{
+	font-family: arial;
+	width: 463px;
+    height: 558px;
+    float: right;
+    border-left: 1px dashed #e9ebee;
+    display: block;
+}
+.reg_r_div{
+	border-radius: 10px;
+	width: 396px;
+	height: 369px;
+	float: left;
+}
+.reg_r_div img{
+	border-radius: 5px;
+    width: 463px;
+    height: 558px;
+}
+.reg-rtitle{
+	font-size: 16px;
+    color: #60606c;
+    line-height: 36px;
+    margin-bottom: 26px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.reg-rtitle a{
+	cursor: pointer;
+    color: #6ab0ff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 36px;
+}
+.zc_b_bd {
+    height: 100px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.zc_brand{
+	border-top: 1px solid #e9ebee;
+    background: #feffff;
+    width: 100%;
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #e9ebee;
+}
+.zc_main{
+	width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+.zc_brand ul{
+	display: block;
+	border-right: 1px solid #e9ebee;
+	list-style: none;
+	margin: 0;
+    padding: 0;
+}
+.zc_brand ul li{
+	text-align: center;
+	margin: 0;
+    padding: 0;
+	width: 298px;
+    float: left;
+    border-left: 1px solid #e9ebee;
+    padding-top: 23px;
+    height: 77px;
+}
+.zc-yecx{
+	display: inline-block;
+	width: 42px;
+    height: 34px;
+    background:url(../img/icon_new.png) -200px 0 no-repeat;
+}
+.zc_brand p{
+	font-family: "microsoft yahei";
+	font-size: 15px;
+    color: #71767a;
+}
+.zc-yewd{
+	display: inline-block;
+	width: 29px;
+    height: 34px;
+    background:url(../img/icon_new.png) -260px 0 no-repeat ;
+}
+.zc-yecxn{
+	display: inline-block;
+	width: 28px;
+    height: 34px;
+    background:url(../img/icon_new.png) no-repeat -320px 0;
+}
+.zc-yelc{
+	display: inline-block;
+	width: 33px;
+    height: 34px;
+    background:url(../img/icon_new.png) no-repeat -380px 0;
+}
+.zc-footmenu{
+	padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+
+.wyd{
+	width: 150px;
+    padding-right: 150px;
+    float: left;
+    margin: 0;
+}
+.zc_main dt {
+	font-family: "微软雅黑";
+    font-size: 16px;
+    color: #60606c;
+    padding-bottom: 15px;
+    display: block;
+}
+.zc_main dd{
+	margin: 0;
+    padding: 0;
+}
+.zc_main a{
+	font-family: "微软雅黑";
+	float: left;
+    min-width: 70px;
+    line-height: 14px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #93939e;
+    text-decoration: none;
+}
+.why{
+	margin: 0;
+	width: 100px;
+    padding-right: 140px;
+    float: left;
+}
+.wsj{
+	margin: 0;
+    width: 150px;
+    padding-right: 110px;
+    float: left;
+}
+.wfy{
+	margin: 0;
+	float: left;
+	width: 150px;
+}
+.wbz{
+	margin: 0;
+	float: right;
+    width: 150px;
+}
+.zc-footer{
+	display: block;
+	padding-bottom: 40px;
+	
+   
+}
+.ainfor{
+	width: 100%;
+	float: left;
+	margin-top: 18px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+    border-top: 1px solid #e9ebee;
+    border-bottom: 1px solid #e9ebee;
+    
+}
+.ainfor a{
+	line-height: 14px;
+    margin-left: 45px;
+    float: left;
+    font-size: 12px;
+    color: #93939e;
+    cursor: pointer;
+    text-decoration: none;
+}
+.zc-copyright{
+	
+    padding-top: 18px;
+}
+.fl{
+	font-size: 12px;
+    color: #93939e;
+    float: left;
+}
+.fr{
+	float: right;
+	font-size: 12px;
+    color: #93939e;
+}
+.pt10{
+    padding-top: 10px;
+    clear: both;
+}
+.sz_k{
+	display: inline-block;
+	margin-right: 50px;
+	background:url(../img/icon_new.png) 0 -192px no-repeat;
+	width: 89px;
+    height: 30px;
+}
+.sz_c{
+	display: inline-block;
+	background:url(../img/icon_new.png) 0 -153px no-repeat;
+	width: 89px;
+    height: 29px;	
+}

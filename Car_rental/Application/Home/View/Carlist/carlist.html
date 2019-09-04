@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://www.car_rental.com/scripts/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://www.car_rental.com/styles/headTop.css"/>
+		<link rel="stylesheet" type="text/css" href="http://www.car_rental.com/styles/carlist.css"/>
+		 <script src="http://www.car_rental.com/scripts/carlist.js" type="text/javascript" charset="utf-8"></script>
+		<title>神舟租车--厦门</title>
+	</head>
+	<body>
+		<!--head start-->
+	    <div id="head_bd">
+	      	<div class="zc-head-main">
+	      		<a href="###" class="zc_logo" alt="神州租车"></a>
+				<ul class="zc-head-menu">
+					<li><a href="/HomePage/HomePage">首页</a></li>
+					<li><a href="/IfoPage/IfoPage#orderAll">我的订单</a></li>
+					<li><a href="/IfoPage/IfoPage#orderMes">基本信息</a></li>
+					<li><a href="###">门店</a></li>
+					<li><a href="/Login/Login">注销</a></li>
+				</ul>
+				<div class="zc-head-index">
+					<div class="zc-head-ifo">
+						<h1 id="topLoginName">
+							你好，Hucker&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="/IfoPage/IfoPage#orderAll">我的神州</a>
+						</h1>
+					</div>
+				</div>
+	      	</div>
+	    </div>
+	    <!--head end-->
+	    <!--Form选车时间表单-->
+	    <div class="zc-form-box" id="zc-form-box">
+	    	<form action="" method="post" id="firstOrderInfo">
+		    	 <div class="zc-form-main">
+		    		<div class="zc-form-fl">
+		    			<div class="zc-form-choose">
+		    				<div class="zc-form-choose1">
+		    					<label class="c-car">取车</label>
+		    					<input type="text" value="厦门" class="zc-form-input" readonly="readonly"/>
+		    				    <input type="text" value="{$data['fetchPlace']}" class="zc-form-input2" readonly="readonly"/>
+		    				</div>
+		    			    <div class="zc-form-choose2">
+		    			    	<label class="c-data">&nbsp;&nbsp;&nbsp;&nbsp;取车时间&nbsp;&nbsp;&nbsp;</label>
+		    			    	<input type="text"  class="zc-form-input2" value="{$data['fetchTime']}" disabled/>
+		    			    	<input type="text"  class="zc-form-input"  value="{$data['fetchHour']}" disabled/>
+		    			    </div>
+		    			    <div class="zc-form-choose3">
+		    			    	<label class="c-car">还车</label>
+		    			    	<input type="text" value="厦门" class="zc-form-input" readonly="readonly"/>
+		    				    <input type="text" value="{$data['backPlace']}"   class="zc-form-input2" readonly="readonly" disabled/>
+		    			    </div>
+		    			    <div class="zc-form-choose4">
+		    			    	<label class="c-data">&nbsp;&nbsp;&nbsp;&nbsp;还车时间&nbsp;&nbsp;&nbsp;</label>
+		    			    	<input type="text"  class="zc-form-input2" value="{$data['backTime']}" disabled/>
+		    			    	<input type="text"  class="zc-form-input" value="{$data['backHour']}" disabled/>
+		    			    </div>
+		    			</div>
+		    		</div>
+		    	    <div class="zc-form-fr">
+		    	    	<div class="zc-form-time-box">
+		    	    		<i>租期: <em class="zc-form-time">{$data['orderDays']}天</em>，不限里程</i>
+		    	    		<a href="/HomePage/HomePage" class="zc-form-reset">重新选择</a>
+		    	    	</div>
+		    	    </div>
+		    	 </div>		    		
+	    	</form>
+	    </div>
+	    <!--Form选车时间表单 END-->
+	    <div class="zc-listmain">
+	    	<!--list left-->
+	    	<div class="zc-listmain-left">
+	    		<div class="zc-listmain-leftchoose" id="zc-listmain-leftchoose">
+	    			<div class="left-cartype">
+	    				<p class="left-title">车型</p>
+	    				<ul class="chexing">
+	    					<li class="left-cartype-li">
+	    						<a class="left-cartype-defult"  href="javascript:void(0)" onclick="carSearch('free-type',1)">
+	    							<i class="zc_cx_bx"></i>
+	    							<span class="cartxt" id="free-type">
+										不限
+									</span>
+	    						</a>
+	    					</li>
+	    					<li class="left-cartype-li">
+	    						<a class="left-cartype-defult"   href="javascript:void(0)" onclick="carSearch('手动紧凑型',1)">
+	    							<i class="zc_cx_sdjc"></i>
+	    							<span class="cartxt" id="手动紧凑型">
+										手动紧凑型
+									</span>
+	    						</a>
+	    					</li>
+	    					<li class="left-cartype-li">
+	    						<a class="left-cartype-defult"  href="javascript:void(0)" onclick="carSearch('经济型',1)">
+	    							<i class="zc_cx_jjx"></i>
+	    							<span class="cartxt" id="经济型">
+										经济型
+									</span>
+	    						</a>
+	    					</li>
+	    					<li class="left-cartype-li">
+	    						<a class="left-cartype-defult"  href="javascript:void(0)" onclick="carSearch('商务型',1)">
+	    							<i class="zc_cx_swx"></i>
+	    							<span class="cartxt" id="商务型">
+										商务型
+									</span>
+	    						</a>
+	    					</li>
+                            <li class="left-cartype-li">
+	    						<a class="left-cartype-defult"  href="javascript:void(0)" onclick="carSearch('豪华型',1)">
+	    							<i class="zc_cx_hhx"></i>
+	    							<span class="cartxt" id="豪华型">
+										豪华型
+									</span>
+	    						</a>
+	    					</li>
+	    					<li class="left-cartype-li">
+	    						<a class="left-cartype-defult"  href="javascript:void(0)" onclick="carSearch('SUV',1)">
+	    							<i class="zc_cx_suv"></i>
+	    							<span class="cartxt" id="SUV">
+										SUV
+									</span>
+	    						</a>
+	    					</li>
+	    					<li class="left-cartype-li">
+	    						<a class="left-cartype-defult"  href="javascript:void(0)" onclick="carSearch('6至15座商务',1)">
+	    							<i class="zc_cx_615"></i>
+	    							<span class="cartxt" id="6至15座商务">
+										6至15座商务
+									</span>
+	    						</a>
+	    					</li>
+	    					<li class="left-cartype-li">
+	    						<a class="left-cartype-defult"  href="javascript:void(0)" onclick="carSearch('个性车',1)">
+	    							<i class="zc_cx_gx"></i>
+	    							<span id="个性车" class="cartxt">
+										个性车
+									</span>
+	    						</a>
+	    					</li>
+	    					<li class="left-cartype-li">
+	    						<a class="left-cartype-defult" href="javascript:void(0)" onclick="carSearch('电动车',1)">
+	    							<i class="zc_cx_ddc"></i>
+	    							<span  id="电动车" class="cartxt">
+										电动车
+									</span>
+	    						</a>
+	    					</li>
+	    				</ul>
+	    			</div>
+	    	        <div class="left-price">
+	    	        	<p class="left-title">价格 (元)</p>
+	    	        	<ul class="pri-range">
+	    	        		<li class="pri-range-ty">
+	    	        			<a href="###" class="pri-range-a">
+	    	        				<span class="w40" id='free-price'></span>
+	    	        			</a>       			
+	    	        		</li>
+	    	        		<li class="pri-range-ty">
+	    	        			<a href="###" class="pri-range-a">
+	    	        				<span class="w39" id='0-300'></span>
+	    	        			</a>       			
+	    	        		</li>
+	    	        		<li class="pri-range-ty">
+	    	        			<a href="###" class="pri-range-a">
+	    	        				<span class="w39" id='300-500'></span>
+	    	        			</a>       			
+	    	        		</li>
+	    	        		<li class="pri-range-ty">
+	    	        			<a href="###" class="pri-range-a">
+	    	        				<span class="w39" id='500-800'></span>
+	    	        			</a>       			
+	    	        		</li>
+	    	        		<li class="pri-range-ty">
+	    	        			<a href="###" class="pri-range-a">
+	    	        				<span class="w38" id='800-9999'></span>
+	    	        			</a>       			
+	    	        		</li>
+	    	        	</ul>
+	    	            <ul class="pri-num">
+	    	            	<li  class="w10">
+								<a href="javascript:void(0)" onclick="carSearch('free-price',3)">不限</a>
+							</li>
+	    	            	<li class="w11" >
+								<a>&nbsp;</a>
+							</li>
+	    	            	<li class="w11"  >
+								<a href="javascript:void(0)" onclick="carSearch('0-300',3)">300</a>
+							</li>
+	    	            	<li class="w12"  >
+								<a href="javascript:void(0)" onclick="carSearch('300-500',3)">500</a>
+							</li>
+	    	            	<li class="w13"  >
+								<a href="javascript:void(0)" onclick="carSearch('500-800',3)">800</a>
+							</li>
+	    	            	<li class="w14" >
+								<a href="javascript:void(0)" onclick="carSearch('800-9999',3)">800+</a>
+							</li>
+	    	            </ul>
+	    	        </div>
+	    		    <div class="left-brand">
+	    		    	<p class="left-title">品牌</p>
+	    		    	<ul class="car-brand">
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('free-brand',2)" id="free-brand" class="w15">不限</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('奥迪',2)" id="奥迪" class="w16">奥迪</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('法拉利',2)" id="法拉利" class="w16">法拉利</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('布加迪',2)" id="布加迪" class="w16">布加迪</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('兰博基尼',2)" id="兰博基尼" class="w16">兰博基尼</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('保时捷',2)" id="保时捷" class="w16">保时捷</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('宝马',2)" id="宝马" class="w16">宝马</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('奔驰',2)" id="奔驰" class="w16">奔驰</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('陆虎',2)" id="陆虎" class="w16">陆虎</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('捷豹',2)" id="捷豹" class="w16">捷豹</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('玛莎拉蒂',2)" id="玛莎拉蒂" class="w16">玛莎拉蒂</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('MINI',2)" id="MINI" class="w16">MINI</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('阿斯顿马丁',2)" id="阿斯顿马丁" class="w16">阿斯顿马丁</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('红旗',2)" id="红旗" class="w16">红旗</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('劳斯莱斯',2)" id="劳斯莱斯" class="w16">劳斯莱斯</a>
+	    		    		</li>
+	    		    		<li class="car-brand-i">
+	    		    			<a  href="javascript:void(0)" onclick="carSearch('林肯',2)" id="林肯" class="w16">林肯</a>
+	    		    		</li>
+	    		    	</ul>
+	    		    </div>
+	    		</div>
+	    	</div>
+	    	<!--list left end-->
+	    	<!--list right -->
+	    	<div class="zc-listmain-right">
+	    		<div class="zc-right-box">
+	    			<ul class="right_tab" id="right_tab">
+	    				<li class="w17">
+	    					<a href="###" class="w18">短租自驾</a>
+	    				</li>
+	    				<li class="w19">
+	    					<a href="###" class="w20"></a>
+	    				</li>
+	    			</ul>
+	    		    <div class="right-clist-box">
+	    		    	<table class="right-list-table" id="oriTable" cellspacing="0" cellpadding="0" border="0" >
+							<foreach name="Car" item="v">
+	    		    	     <tr>
+	    		    			<td class="pic" >
+	    		    				<a href="/Carlist/CarPage.html?Car_Id={$v.car_id}"><img src="{$v.car_url}" ></a>
+	    		    			</td>
+	    		    			<td class="info">
+	    		    				<p class="info-name">{$v.car_name}</p>
+	    		    				<p class="info-oth">{$v.car_detailna}</p>
+	    		    				<div class="alltips">
+	    		    					<i class="bh-rm">热门车</i>
+	    		    					<i class="bh-xin">新车型</i>
+	    		    				</div>
+	    		    			</td>
+	    		    		    <td class="ord">
+	    		    		    	<div class="order-box">
+	    		    		    		<div class="order-box-left">
+	    		    		    			<div class="car-price">
+	    		    		    				<span class="order-price-head">
+	    		    		    					<em class="order-rmb">¥</em>
+	    		    		    					<em class="order-num">{$v.car_price}</em>
+	    		    		    					<em class="order-unit">/套餐价</em>
+	    		    		    				</span>
+	    		    		    			    <div class="order-price-bottom">
+	    		    		    			    	<span>
+	    		    		    			    		<em class="order-total">原价:</em>
+	    		    		    			    		<em class="order-smrmb">¥</em>
+	    		    		    			    		<em class="order-smnum">{$v.car_oripri}</em>
+	    		    		    			    	</span>
+	    		    		    			    </div>
+	    		    		    			</div>
+	    		    		    		</div>
+	    		    		    	    <a href="/Index/ording?car_id={$v.car_id}" class="od-but">立即预定</a>
+	    		    		    	</div>
+	    		    		    </td>
+	    		    		</tr>
+							</foreach>
+	    		    	</table>
+						<!--ajax现在的table-->
+						<table class="right-list-table" id="conTable" style="display: none " cellspacing="0" cellpadding="0" border="0" >
+								<!--<tr>-->
+									<!--<td class="pic" >-->
+										<!--<a href="/Carlist/CarPage.html?Car_Id={$v.car_id}"><img src="{$v.car_url}" ></a>-->
+									<!--</td>-->
+									<!--<td class="info">-->
+										<!--<p class="info-name">{$v.car_name}</p>-->
+										<!--<p class="info-oth">{$v.car_detailna}</p>-->
+										<!--<div class="alltips">-->
+											<!--<i class="bh-rm">热门车</i>-->
+											<!--<i class="bh-xin">新车型</i>-->
+										<!--</div>-->
+									<!--</td>-->
+									<!--<td class="ord">-->
+										<!--<div class="order-box">-->
+											<!--<div class="order-box-left">-->
+												<!--<div class="car-price">-->
+	    		    		    				<!--<span class="order-price-head">-->
+	    		    		    					<!--<em class="order-rmb">¥</em>-->
+	    		    		    					<!--<em class="order-num">{$v.car_price}</em>-->
+	    		    		    					<!--<em class="order-unit">/套餐价</em>-->
+	    		    		    				<!--</span>-->
+													<!--<div class="order-price-bottom">-->
+	    		    		    			    	<!--<span>-->
+	    		    		    			    		<!--<em class="order-total">原价:</em>-->
+	    		    		    			    		<!--<em class="order-smrmb">¥</em>-->
+	    		    		    			    		<!--<em class="order-smnum">{$v.car_oripri}</em>-->
+	    		    		    			    	<!--</span>-->
+													<!--</div>-->
+												<!--</div>-->
+											<!--</div>-->
+											<!--<a href="/Index/ording?car_id={$v.car_id}" class="od-but">立即预定</a>-->
+										<!--</div>-->
+									<!--</td>-->
+								<!--</tr>-->
+						</table>
+	    		    </div>
+	    		</div>
+	    	</div>
+	    	<!--list right end-->
+	    </div>
+	</body>
+</html>

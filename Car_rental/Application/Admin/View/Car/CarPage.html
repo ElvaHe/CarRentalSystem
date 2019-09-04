@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/CarPage.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+					<li><a href="#"><i>修改用户信息</i></a></li>
+					<li><a href="#"><i>邮件集体分发</i></a></li>
+
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+					<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+					<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+					<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+					<li><a href="/Car/CarManage"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper">
+		    	<div class="page-wrapper-main">
+		    		<h1>查询车辆信息</h1>
+		    	    <div class="search-table-box">
+		    	    	<div class="search-table-main">
+		    	    		<div class="search-table">
+		    	    			<div class="panel-heading">车辆查询</div>
+		    	    			<div class="seacrh-line" style="float: right; width: 500px;">
+										<span  style="line-height: 20px">Search:</span>
+										<select class="chooseSel" name="method" >
+											<option selected="selected">请选择您要查询的方式</option>
+											<option >车辆编号</option>
+											<option >车辆品牌</option>
+											<option >车辆类型</option>
+										</select>
+										<input type="text" name="mem_search" class="searchInput" id="searchInput"/>
+										<input type="button" value="查询" class="submitInput" id="submitBut" onclick="searchBut()"/>
+		    	    			</div>
+		    	    		    <table class="table-mian" border="1" style="width: 965px">
+		    	    		    	<thead>
+                                        <tr >
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending"  style="width: 50px;">车辆ID</th>
+											<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending"  style="width: 140px;">车辆品牌</th>
+											<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending"  style="width: 140px;">车辆类型</th>
+											<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 220px;">车辆名称</th>
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 140px;">车辆价格 元/天</th>
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 275px;">操作方式</th>
+                                        </tr>
+                                    </thead>
+		    	    		        <tbody>
+										<foreach name="Car" item="v" >
+											<tr class="gradeAeven">
+												<td class="table-td" style="text-align: center">{$v.car_id}</td>
+												<td class="table-td" style="text-align: center">{$v.car_brand}</td>
+												<td class="table-td" style="text-align: center">{$v.car_type}</td>
+												<td class="table-td" style="text-align: center">{$v.car_name}</td>
+												<td class="table-td" style="text-align: center">{$v.car_price}</td>
+												<td class="table-td action">
+													<a href="/Car/CarRental?Car_Id={$v.car_id}">被租记录</a> |
+													<a href="/Car/CarManage?Car_Id={$v.car_id}">管理车辆</a> |
+													<a href="/Car/CarModify?Car_Id={$v.car_id}">车辆信息</a>
+												</td>
+											</tr>
+										</foreach>
+											<tr class="gradeAodd"  style="height: 46px;visibility: hidden;text-align: center;">
+												<td class="table-td" id="td-one" style="text-align: center;"></td>
+												<td class="table-td" id="td-five"></td>
+												<td class="table-td" id="td-two"></td>
+												<td class="table-td" id="td-three"></td>
+												<td class="table-td" id="td-eight"></td>
+												<td class="table-td action "style="width:275px ">
+													<a href="javascript:void(0)" id="td-four">被租记录</a> |
+													<a href="javascript:void(0)" id="td-six">管理车辆</a> |
+													<a href="javascript:void(0)" id="td-seven">车辆信息</a>
+												</td>
+											</tr>
+		    	    		        </tbody>
+		    	    		    </table>
+		    	    		    <div class="fenye-line">
+		    	    		    	<div class="fenye-main">
+		    	    		    		<a href="###">Previous</a>
+		    	    		    		<a href="###">1</a>
+		    	    		    		<a href="###">2</a>
+		    	    		    		<a href="###">3</a>
+		    	    		    		<a href="###">4</a>
+		    	    		    		<a href="###">Next</a>
+		    	    		    	</div>
+		    	    		    </div>
+		    	    		</div>
+		    	    	</div>
+		    	    </div>
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>

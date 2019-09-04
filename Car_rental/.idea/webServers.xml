@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="82891692-56f4-4a6c-bf3d-6145ebdd2649" name="Car_rental" url="http://192.168.137.10">
+        <fileTransfer host="192.168.137.10" port="22" rootFolder="/srv" accessType="SFTP" password="df9bdf98df99df9edf9fdf9c" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

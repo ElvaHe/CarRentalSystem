@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="http://www.car_rental.com/styles/ordering.css"/>
+		<title>神舟租车--厦门</title>
+	</head>
+	<body>
+
+		<div class="ordrDetails">
+			<!--top start-->
+			<div class="orDeTop">
+				<a href="###" class="head-logo"></a>
+				<div class="head-right-box">
+					<ul>
+						<li class="tell_down">
+							<div class="phone_icon">&nbsp;</div>
+							<span></span>
+						</li>
+					    <li>
+							<a href="/IfoPage/IfoPage#orderMes">欢迎您，{$Mem->mem_nickname}</a>
+					    </li>
+					    <li><a href="/IfoPage/IfoPage#orderAll">我的订单</a></li>
+					    <li><a href="/Login/exit_action">退出</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--top end-->
+			<!--order info start-->
+	        <div class="orderInfoBox">
+	        	<h3>基本信息</h3>
+	        	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="f14">
+				  <tbody>
+				  	<tr>
+					  	<td width="10" style="border: 0;">&nbsp;</td>
+					  	<td colspan="3" rowspan="3" align="center" valign="middle" class="borderBlueB" height="99">
+					  	<!--	<img src="http://image.zuchecdn.com/brand/order/xuefulan.png">-->
+					  		<img src="{$Car->car_url}" width="185" height="100">
+					  	</td>
+					  	<td width="240" align="center" class="borderBlueBda" rowspan="2">
+					  		<strong>取车时间</strong>：{$_SESSION['fetchTime']}&nbsp;&nbsp;{$_SESSION['fetchHour']}</td>
+					  	<td width="78" align="right" class="borderBlueBde" rowspan="2">
+					  		<strong>取车地点</strong>：
+					  	</td>
+					  	<td rowspan="2" height="66" class="borderBlueBde" width="260">
+					  		厦门&nbsp;&nbsp;{$_SESSION['fetchPlace']}</td>
+			  	   </tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+					  	<td style="border-bottom: 1px solid #dbe4eb;">&nbsp;</td>
+					  	<td rowspan="2" align="center" valign="middle" class="borderBlueBda" height="66">
+					  		<strong>还车时间</strong>：{$_SESSION['backTime']}&nbsp;&nbsp;{$_SESSION['backHour']}</td>
+					  	<td rowspan="2" align="right" class="borderBlueBde"><strong>还车地点</strong>：</td>
+					  	<td rowspan="2" align="left" valign="middle" class="borderBlueBde">
+					  		厦门&nbsp;&nbsp;{$_SESSION['backPlace']}</td>
+				  	</tr>
+					 <tr class="f16" style="font-family:'微软雅黑';">
+					 	<td class="borderBlueB">&nbsp;</td>
+					  	<td height="33" align="center" valign="middle" class="borderBlueR borderBlueB">{$Car->car_name}</td>
+					  	<td align="center" valign="middle" class="borderBlueR borderBlueB">{$Car->car_detailna}</td>
+					  	<td align="center" valign="middle" class="borderBlueR borderBlueB">乘坐{$Car->car_seatnum}人</td>
+				  	</tr>
+			  	</tbody></table>
+	        </div>
+	        <!--order info end-->
+	        <!--费用明细 开始-->
+	        <h3 class="pink">费用明细</h3>
+	        <div class="orderMoneyBox">
+	           <div class="orderMoneyBoxOne">
+		           	<a class="orderDetailsCheck"></a>
+		           	<span class="serverName">不记免赔服务</span>
+	           	    <span class="sz_OrderpOrangeS">
+                        <em class="rmb">¥</em>
+                		<em class="servicePrice">50</em>
+                		<em class="unit">元/天</em>	
+			        </span>
+	                <p class="serviceDesc">如车辆租赁期间出险，客户无需承担保险理赔范围内的任何损失,以及轮胎损失。<br>本服务按天计费，超时4小时以上按1天计费，超时4小时以内不另计费。</p>
+	           </div>
+	           <div class="orderMoneyBoxTwo">
+		           	 <a href="###" class="checked"></a>
+		           	 <span class="serverName">上门取车</span>
+		           	 <span class="sz_OrderpOrangeS">
+                        <em class="rmb">¥</em>
+						 <div class="zcmficon"></div>
+		           	 </span>
+		           	 <p class="serviceDesc">工作人员将上门取车，为您办理租车手续，请保持手机畅通。</p>
+	           </div>
+	           <div class="orderMoneyBoxThree">
+	           	   <div class="orderMoneyBoxThreeOne">
+	           	 		<span class="sz_OrderpOrangeM">
+                            <em class="servicermb">¥</em>
+                            <em class="serviceNum">{$CarPrice['$Car_priOne']}</em>
+                        </span>
+	           	 	</div>
+	               <div class="calculate">
+                        <span class="sz_priceGraySmall">
+                            <em class="smallNum">{$Car->car_price}x{$_SESSION['orderDays']}</em>
+                            <em class="smallUnit">=</em>	
+                        </span>
+                    </div>
+	               <span class="feeName">车辆租赁费及门店服务费</span>
+	           </div>
+	           <div class="orderMoneyBoxFour">
+	           	   <div class="orderMoneyBoxThreeOne">
+	           	 		<span class="sz_OrderpOrangeM">
+                            <em class="servicermb">¥</em>
+                            <em class="serviceNum">{$CarPrice['$Car_baoXian']}</em>
+                        </span>
+	           	 	</div>
+	               <div class="calculate">
+                        <span class="sz_priceGraySmall">
+                            <em class="smallNum">40x{$_SESSION['orderDays']}</em>
+                            <em class="smallUnit">=</em>	
+                        </span>
+                    </div>
+	               <span class="feeName">基本保险费(必选)</span>
+	           </div>
+	           <div class="orderMoneyBoxFive">
+	           	   <div class="orderMoneyBoxThreeOne">
+	           	 		<span class="sz_OrderpOrangeM">
+                            <em class="servicermb">¥</em>
+                            <em class="serviceNum">35</em>
+                        </span>
+	           	 	</div>
+	               <div class="calculate">
+                        <span class="sz_priceGraySmall">
+                            <em class="smallNum">合计</em>
+                            <em class="smallUnit">=</em>	
+                        </span>
+                    </div>
+	               <span class="feeName">其它费用</span>
+	           </div>       
+	           <div class="orderMoneyBoxSix">
+	           	    <div class="orderMoneyBoxSixOne">
+	                    <span class="sz_OrderpOrangeM">
+	                        <em class="servicermb" style="font-size: 14px;">¥</em>
+	                        <em class="serviceNum" style="font-size: 18px;">35</em>
+	                    </span>
+				    </div>
+	                <span class="smallName">其它费用</span>
+	           </div>
+	           <div class="orderMoneyBoxSeven">
+	           	    <div class="orderMoneyBoxSixOne">
+	                    <span class="sz_OrderpOrangeM">
+	                        <em class="servicermb" style="font-size: 14px;">¥</em>
+	                        <em class="serviceNum" style="font-size: 18px;">0</em>
+	                    </span>
+				    </div>
+	                <span class="smallName">上门取车</span>
+	           </div>
+	           <div class="orderMoneyBoxEight">
+	          	 	<span class="yjtotal">订单总价：</span>
+	          	 	<span class="sz_OrderpOrangeB">
+				           <em class="Bigrmb">¥</em>
+				           <em class="Bignum">{$CarPrice['$Car_Total']}</em>
+				    </span>
+	                <a href="/Index/ordersuccess?car_id={$Car->car_id}" class="orderButton">提交订单</a>
+	           </div>
+	        </div>
+	        <!--费用明细 借书 -->
+	        <!--退改规则 开始-->
+		    <div class="orderRuelsTwoBox">
+		    	<p class="orderRuelsTwoBoxp1">退改规则</p>
+		    	<p class="orderRuelsTwoBoxp2">
+		    		订单修改或取消：<br>
+		    	&nbsp;&nbsp;a)取车时间距当前时间≥2个工作小时，请提前致电400 616 6666：取车时间在门店的营业时间内，请提前2小时申请；取车时间在门店营业时间之外，请您尽早致电申请。<br>
+		    	&nbsp;&nbsp;b)取车时间距当前时间＜2个工作小时，不接受修改。
+		    	</p>
+		    	<font class="orderRuelsTwoBoxp3">（小贴士：如果您修改订单或取消订单重新预订，价格可能会发生变化。）</font>
+		    </div>
+		    <!--退改规则 END-->
+		    <div class="orderfooter">
+		    	<p>
+					<a title="关于我们" href="http://huodong.zuche.com/gywm/">关于我们</a>
+					|&nbsp;<a title="投资者关系" target="_blank" href="http://ir.zuche.com">投资者关系</a>
+					|&nbsp;<a rel="nofollow" target="_parent" title="新闻中心" href="http://news.zuche.com/">新闻中心</a>
+					|&nbsp;<a title="加盟合作" target="_blank" href="http://jiameng.zuche.com">加盟合作</a>
+					|&nbsp;<a title="隐私保护" target="_parent" href="http://huodong.zuche.com/ysbh/">隐私保护</a>
+					|&nbsp;<a title="网站导航" target="_parent" href="http://help.zuche.com/sitemap/">网站导航</a>
+					|&nbsp;<a title="联系我们" target="_parent" href="http://huodong.zuche.com/lxwm/">联系我们</a>
+					|&nbsp;<a title="招贤纳士" target="_blank" href="http://hr.zuche.com/">招贤纳士</a>
+				</p>
+		        <p class="orderfootericon">
+		        	<a class="sz_k">&nbsp;</a>
+		        	<a class="sz_c">&nbsp;</a>
+		        </p>
+		        <p>Copyright©2008-2016 www.zuche.com All Rights Reserved. </p>
+		        <p>如果您对神州租车网站有任何意见,欢迎发送邮件到 web@zuche.com </p>
+		        <p>神州租车官网 京ICP备10005002号&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;京公网安备号 11010502026705</p>
+		    </div>
+		    <!--footer end-->
+		</div>
+	</body>
+</html>

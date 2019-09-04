@@ -1,0 +1,301 @@
+.addCar-showIfo{
+	padding: 5px 40px 12px 20px;
+	min-height: 1230px;
+    background-color: #fff;
+}
+.addCar-showIfo ul{
+    display: block;
+    margin-top: 35px;
+    list-style: none;
+    padding: 0;
+}
+.addCar-showIfo li{
+	margin: 0 10px 0 10px;
+	float: left;
+	width: 100%;
+}
+.addCar-head{
+	color: #555;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-indent: 16px;
+	font-size: 15px;
+	line-height: 32px;
+	font-family: arial;
+	width: 100%;
+	float: left;
+	height: 30px;
+	border-bottom: 1px solid rgb(97, 161, 223);
+}
+.addCar-Pic{
+	float: left;
+	width: 100%;
+}
+.addCar-show{
+	margin-left: 10px;
+	margin-top: 24px;
+	float: left;
+	width: 200px;
+	height: 130px;
+	border: 1px solid gainsboro;
+}
+.yulan{
+	margin-left: 40px;
+	font-size: 12px;
+	margin-top: 135px;
+	float: left;
+}
+.addCar-show img{
+	width: 200px;
+	height: 130px;
+}
+.addCar-show-right{
+	float: right;
+	margin-right:100px ;
+	width: 500px;
+	height: 155px;
+}
+.addCar-show-right-top{
+	margin-top: 24px;
+	float: left;
+	width: 100%;
+	height: 70px;
+}
+.add-headtop{
+	display: block;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	font-weight: bold;
+}
+.add-headtop1{
+	margin-top: 4px;
+	display: block;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+#addCar-pibuton{
+	margin-top: 15px;
+	float: left;
+	border-radius: 5px;
+    height: 42px;
+    cursor: pointer;
+}
+.addCar-show-right input{
+	width: 180px;
+}
+/*第二行*/
+
+.addCar-normal{
+	padding: 10px 20px;
+	height: 50px;
+	float: left;
+	width: 100%;
+	border-bottom: 1px dashed rgb(219, 228, 235);
+}
+.addCar-norOne{
+	font-size: 15px;
+	font-family: arial;
+	width: 50%;
+	float: left;
+	height: 60px;
+	
+}
+.addCar-norOne input{
+	cursor: initial;
+    width: 200px;
+    border-color: #e9ebee;
+    border-style: solid;
+    border-width: 1px;
+    height: 28px;
+    color: #93939e;
+    vertical-align: middle;
+    background-color: #fff;
+}
+.pp{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0 0; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.cx{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -22px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.ndk{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -44px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.pzk{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -66px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+/*第三行*/
+.zw{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -88px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.cm{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -110px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.rll{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -132px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.bsx{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -154px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.pl{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -172px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.ryh{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -195px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.qd{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -215px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.fdj{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -233px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.tc{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -250px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.yxrl{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -288px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.yx{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -309px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.zy{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -329px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.dxld{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -350px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.qn{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -373px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.dvd{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -395px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.gps{
+	margin-left: 20px;
+	margin-top: 15px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -416px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+/*---*/
+.addcCargraybutbox{
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff;
+}
+.addcCargraybutbox a{
+	float: left;
+	font-family: "微软雅黑";
+    padding: 0 10px;
+    display:block;
+    text-decoration: none;
+    width: 130px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 2px;
+    height: 42px;
+    line-height: 42px;
+    background-color: #f3b900;
+    cursor: pointer;
+    border: 0;
+    margin-left: 420px;
+}

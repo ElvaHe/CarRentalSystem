@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/carManage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderManage.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+					<li><a href="#"><i>修改用户信息</i></a></li>
+					<li><a href="#"><i>邮件集体分发</i></a></li>
+
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+					<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+					<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+					<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+					<li><a href="/Car/CarManage"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper">
+		    	<div class="page-wrapper-main">
+		    		<h1>车辆信息操作</h1>
+		    		<div class="carMan-showIfo">
+		    			<ul>
+		    				
+		    				<li class="orderMan-One" style="height:98px;">
+		    					<label class="orderMan-Ifoin1">车辆图片：</label>
+		    					<img src="{$Car['car_url']}" width="166" height="97">
+		    				    <span class="orderMan-One-span">
+		    				    	{$Car['car_detailna']}
+		    				    </span>
+		    				    <span class="orderMan-One-small">
+		    				    	【{$Car['car_status']}】
+		    				    </span>
+		    				</li>
+		    				<li class="CarMan-Two" style="height:98px;">
+		    					<label>基本信息：</label>
+		    					<table border="0">
+		    				    	<tr>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="pp">&nbsp;</b>
+		    				    			品&nbsp;&nbsp;&nbsp;牌:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_brand']}</td>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="cx">&nbsp;</b>
+		    				    			车&nbsp;&nbsp;&nbsp;系:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_type']}</td>
+		    				    	</tr>
+		    				    	<tr>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="ndk">&nbsp;</b>
+		    				    			年贷款:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_year']}</td>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="pzk">&nbsp;</b>
+		    				    			配置款:</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_configuration']}</td>
+		    				    	</tr>
+		    				    	
+		    				    </table>
+		    				</li>
+		    				<li class="CarMan-Three" style="height:98px;">
+		    					<label>配置信息：</label>
+		    					<table border="0">
+		    				    	<tr>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="zw">&nbsp;</b>
+		    				    			座位数:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_seatnum']}</td>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="cm">&nbsp;</b>
+		    				    			车门数:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_door']}</td>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="zy">&nbsp;</b>
+		    				    			座&nbsp;&nbsp;&nbsp;椅:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_seatsort']}</td>
+		    				    	</tr>
+		    				    	<tr>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="tc">&nbsp;</b>
+		    				    			天&nbsp;&nbsp;&nbsp;窗:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_skylight']}</td>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="pzk">&nbsp;</b>
+		    				    			气&nbsp;&nbsp;&nbsp;囊:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_gasbag']}</td>
+		    				    		<td class="CarMan-td-1">
+		    				    			<b class="pl">&nbsp;</b>
+		    				    			排&nbsp;&nbsp;&nbsp;量:
+		    				    		</td>
+		    				    		<td class="CarMan-td-2">{$Car['car_pailiang']}</td>
+		    				    	</tr>
+		    				    </table>
+		    				</li>
+		    				<li class="CarMan-Four" style="height:60px; ">
+		    					<label>价格信息：</label>
+		    					<span class="CarMan-Four-Pr">
+		    						¥{$Car['car_price']}&nbsp;/&nbsp;日
+		    					</span>
+		    				</li>
+		    				
+		    			</ul>  		    
+		    		</div>
+		    	 	<div class="ordergraybutbox">
+						<if condition="($Car['car_status'] eq '上架中')">
+							<a href="/Car/CarDown/?Car_Id={$Car['car_id']}" class="orderman-Ifo-sbm-but" >下架</a>
+							<else />
+							<a href="/Car/CarUp/?Car_Id={$Car['car_id']}" class="orderman-Ifo-sbm-but" >上架</a>
+						</if>
+		                <a href="/Car/CarModify/?Car_Id={$Car['car_id']}" class="orderman-Ifo-sbm-but" >编辑信息</a>
+		                <a href="/Car/CarRental/?Car_Id={$Car['car_id']}" class="orderman-Ifo-sbm-but" >租赁记录</a>
+		            </div>
+		    	    
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>
+

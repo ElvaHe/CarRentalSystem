@@ -1,0 +1,281 @@
+body{
+    background: #f6fafb;
+}
+.ordrDetails{
+	color: #848484;
+	width: 980px;
+    margin: 0 auto;
+    color: #848484;
+}
+/*order details head start*/
+.orDeTop{
+	height: 77px;
+    width: 100%;
+}
+.head-logo{
+	text-decoration: none;
+    cursor: pointer;
+    width: 282px;
+    height: 67px;
+    display: block;
+    float: left;
+    background: url(../img/logo.png) no-repeat left top;
+    border-right: 0;
+}
+.head-right-box{
+	float: right;
+}
+.head-right-box ul{
+	margin-top: 15px;
+	list-style: none;
+}
+.tell_down{
+	display: block;
+	position: relative;
+	float: left;
+    line-height: 30px;
+}
+.tell_down span{
+	float: left;
+	display: inline-block;
+    width: 20px;
+    height: 35px;
+    background: url(../img/telDown2.png) no-repeat center;
+    cursor: pointer;
+}
+.phone_icon{
+	float: left;
+	width: 160px;
+    height: 30px;
+    cursor: pointer;
+	background: url(../img/icon.png) 0 -572px no-repeat;
+}
+.head-right-box li{
+	float: left;
+    line-height: 30px;
+}
+.head-right-box a {
+    color: #333;
+    padding: 0 7px;
+    border-right: 1px solid #333;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+/*order details head end*/
+/**order TIP***/
+.orderTipBox{
+	padding: 15px;
+    position: relative;
+    background: #e0f0d8;
+    border: 1px solid #81b449;
+    border-bottom-width: 2px;
+}
+.orderTipOne{
+    border-bottom: 1px dashed #81b449;
+    padding: 10px 0;
+}
+.greencheck{
+	background: url(../img/order.png) no-repeat 0 -276px;
+    font-size: 30px;
+    padding-left: 32px;
+    line-height: 30px;
+
+}
+.orderTipOne_1{
+	font-size: 30px;
+    font-family: "微软雅黑",arial,Simsun,sans-serif;
+    color: #346635;
+}
+.orderTipOne_2{
+	color: black;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+.orderTipOne_3{
+    vertical-align: -8px;
+	display: inline-block;
+    overflow: hidden;
+    
+}
+.rmb{
+	width: 10px;
+    height: 16px;
+    display: inline-block;
+    font: 16px/16px "微软雅黑";
+    color: #f60;
+    float: left;
+    margin: 9px 3px 0 0;
+}
+.orderTipOne_3_num{
+	display: inline-block;
+    font: 30px/30px arial;
+    color: #f60;
+    float: left;
+    margin-right: 2px;
+}
+.orderTipTwo{
+	color: black;
+	padding: 10px 0;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+.orderTipTwo a{
+	font-size: 15px;
+    color: #81b449;
+    text-decoration: none;
+    cursor: pointer;
+}
+/**order TIP END***/
+/**order Info start***/
+.orderInfoBox{
+    background: #fff;
+    margin: 20px 0;
+    border: 1px solid #dbe4eb;
+    border-bottom-width: 2px;
+}
+.orderInfoBox h3{
+	display: block;
+	height: 40px;
+    line-height: 40px;
+    background: #eaf6fd;
+    border-bottom: solid 1px #dbe4eb;
+    font-size: 16px;
+    color: #61a1df;
+    font-family: arial;
+    padding: 0 10px;
+    font-weight: 400;
+    margin: 0;
+}
+table{
+	color: black;
+	border-collapse: collapse;
+}
+tbody{
+	display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+table strong{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 20px;
+}
+.borderBlueB{
+    border-right: solid 1px #dbe4eb;
+    border-bottom: solid 1px #dbe4eb;
+}
+.borderBlueBda{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	border-right: solid 1px #dbe4eb;
+	border-bottom: dashed 1px #dbe4eb;
+}
+.borderBlueBde{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	border-bottom: dashed 1px #dbe4eb;
+}
+/**order Info END***/
+.orderBut{
+	text-align: center;
+}
+.orderBut input{
+	color: #848484;
+    font-size: 16px;
+    font-family: "微软雅黑";
+}
+/**  button end**/
+.orderRuelsOneBox{
+	margin-top: 50px;
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #dbe4eb;
+    border-bottom-width: 2px; 
+}
+.orderRuelsOneBoxp1{
+	color: #000;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-family: "微软雅黑";
+}
+.orderRuelsOneBoxp2{
+    line-height: 24px;
+    color: #848484;
+    font-size: 12px;
+}
+.orderRuelsOneBoxp3{
+	color: #ed5565;
+    padding-left: 12px;
+    line-height: 24px;
+    font-size: 12px;
+}
+/**退改规则  END*/
+.orderRuelsTwoBox{
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #dbe4eb;
+    border-bottom-width: 2px;
+    background: #FFF;
+}
+.orderRuelsTwoBoxp1{
+	color: #000;
+	padding-bottom: 10px;
+	font-size: 16px;
+    font-family: "微软雅黑";
+}
+.orderRuelsTwoBoxp2{
+	padding-left: 12px;
+    line-height: 24px;
+    color: #848484;
+    font-size: 12px;
+}
+.orderRuelsTwoBoxp3{
+	font-size: 12px;
+	color: #848484;
+}
+/*退改规则2  END*/
+.orderfooter{
+	width: 980px;
+    clear: both;
+    text-align: center;
+    padding-top: 15px;
+    margin: 60px auto;
+    font-family: Arial,verdana;
+    color: #848484;
+    padding: 0;	
+}
+.orderfooter p{
+	font-size: 12px;
+	text-align: center;
+
+}
+.orderfooter a{
+	line-height: 30px;
+	font-family: arial;
+    font-size: 12px;
+	color: #848484;
+    margin: 0 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.orderfootericon{
+	text-align: center;
+}
+.sz_k{
+	width: 90px;
+    height: 36px;
+    display: inline-block;
+    text-decoration: none;
+	background: url(../img/icon.png) no-repeat 0 -269px;
+}
+.sz_c{
+	width: 90px;
+    height: 36px;
+    display: inline-block;
+    text-decoration: none;
+	background: url(../img/icon.png) no-repeat 0 -228px;
+}
+/**footer end**/

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/orderPage.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderPage.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+					<li><a href="#"><i>修改用户信息</i></a></li>
+					<li><a href="#"><i>邮件集体分发</i></a></li>
+
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+					<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+					<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+					<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+					<li><a href="/Car/CarManage"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper">
+		    	<div class="page-wrapper-main">
+		    		<h1>User Information View</h1>
+		    		<div class="show-OrderIfo">
+		    			<table class="zc-order-table" cellpadding="0" cellspacing="0" border="0">
+	           	    		<thead>
+	           	    			<tr>
+	                            <th class="al">订单信息</th>
+	                            <th width="197"></th>
+	                            <th class="al" width="300">取/还车信息</th>
+	                            <th class="ac" width="110">总计</th>
+	                            <th class="ac" width="110">订单状态</th>
+	                            </tr>
+	           	    		</thead>
+	           	    	    <tbody>
+							    <tr>
+	           	    	    		<td width="100px">
+	                            		<img id="orderImg" width="166" height="97">
+	                                </td>
+	                                <td class="ol-carinfo">
+		                                <b id="Car_Name"></b>
+		                                <p id="Car_DetailNa"></p>
+		                                <p id="Order_Num"></p>
+	                                </td>
+	           	    	    	    <td>
+	           	    	    	    	<div class="zc-order-place">
+	           	    	    	    		<p class="zctooltipfetch">
+	                                    		<i class="zc_fetch_i"></i>
+	                                    		<span id="Order_FetchPlace"></span><br/><br/>
+	                                    		<span id="Order_FetcTime" ></span>
+	           	    	    	    		</p>
+	           	    	    	    	    
+	           	    	    	    	    <p class="zctooltipback">
+			                                    <i class="zc_giveback_i"></i>
+												<span id="Order_BackPlace"></span><br/><br/>
+			                                   <span id="Order_BackTime" ></span>
+	           	    	    	    	    </p>
+	           	    	    	    	    
+	           	    	    	    	</div>
+	           	    	    	    </td>
+	           	    	    	    <td>
+		                                <div class="ol-aggregate">
+		                                    ¥<span id="Car_Pice"></span>
+		                                </div>
+	                                </td>
+	           	    	    	    <td class="status-ac">
+	                            	<span class="s-gray" id="Order_Status">
+									</span>
+	                                </td>
+	           	    	    	</tr>	           	    	
+	           	    	    </tbody>
+	           	    	</table>
+		    		</div>
+		    	 	<div class="graybutbox">
+		                <a href="###" class="Ifo-sbm-but" id="managebut">订单操作</a>
+		            </div>
+		    	    <div class="search-table-box">
+		    	    	<div class="search-table-main">
+		    	    		<div class="search-table">
+		    	    			<div class="panel-heading">订单查询</div>
+		    	    			<div class="seacrh-line">
+		    	    				<div class="seacrh-line-inner">
+										<span>Search:</span>
+											<select class="chooseSel" name="method">
+												<option selected="selected">请选择您要查询的方式</option>
+												<option >订单编号</option>
+												<option >会员用户名</option>
+											</select>
+										<input type="text" name="mem_search" class="searchInput" id="searchInput"/>
+										<input type="button" value="查询" class="submitInput" onclick="searchBut()" id="submitBut"/>
+		    	    				</div>
+		    	    			</div>
+		    	    		    <table class="table-mian" border="1" style="margin-left: 20px">
+		    	    		    	<thead>
+                                        <tr >
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending"  style="width: 140px;">订单编号</th>
+											<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 150px;">订单状态</th>
+											<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 130px;">下单用户</th>
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 230px;">订单创建时间</th>
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 275px;">操作方式</th>
+                                        </tr>
+                                    </thead>
+		    	    		        <tbody>
+										<foreach name="Order" item="v" >
+											<tr class="gradeAeven">
+												<td class="table-td" style="text-align: center;">{$v.order_num}</td>
+												<td class="table-td" style="text-align: center" >
+													<if condition="($v.order_status eq 0)"> 订单已取消
+														<elseif condition="($v.order_status eq 1)" />预定成功
+														<elseif condition="($v.order_status eq 2)" />租赁中
+														<else /> 订单已完成
+													</if>
+												</td>
+												<td class="table-td" style="text-align: center;">{$v.mem_name}</td>
+												<td class="table-td" style="text-align: center">{$v.order_cretime} </td>
+												<td class="table-td action" >
+													<a href="javascript:void(0)" id="td_look" onclick="searchOrder('{$v.order_num}')">查看订单</a> |
+													<a href="/Order/orderManage?Order_Num={$v.order_num}">操作订单</a> &nbsp;|
+													<a href="/Order/orderModify?Order_Num={$v.order_num}">修改订单信息</a>
+												</td>
+											</tr>
+										</foreach>
+											<tr class="gradeAodd"  style="height: 46px;visibility: hidden;text-align: center;">
+												<td class="table-td" id="td-one" style="text-align: center;"></td>
+												<td class="table-td" id="td-five"></td>
+												<td class="table-td" id="td-two"></td>
+												<td class="table-td" id="td-three"></td>
+												<td class="table-td action">
+													<a href="javascript:void(0)" id="td-four">查看订单</a> |
+													<a href="javascript:void(0)" id="td-six">操作订单</a> |
+													<a href="javascript:void(0)" id="td-seven">修改订单信息</a>
+												</td>
+											</tr>
+		    	    		        </tbody>
+		    	    		    </table>
+		    	    		    <div class="fenye-line">
+		    	    		    	<div class="fenye-main">
+										<if  condition= "$_GET['pageAll'] neq 1 "  >
+											<a href="/Order/OrderPage?pageAll={$_GET['pageAll']-1}$$Sort={$_GET['Sort']}&&Mem_Name={$_GET['Mem_Name']}">Previous</a>
+										</if>
+										<for start="1" end="$PageAll['count_page']+1" >
+											<a href="/Order/OrderPage?pageAll={$i}&&Sort={$_GET['Sort']}&&Mem_Name={$_GET['Mem_Name']}">{$i}</a>
+										</for>
+										<if  condition= "$_GET['pageAll'] neq $PageAll['count_page'] "  >
+											<a href="/Order/OrderPage?pageAll={$_GET['pageRun']+1}&&Sort={$_GET['Sort']}&&Mem_Name={$_GET['Mem_Name']}">Next</a>
+										</if>
+
+		    	    		    	</div>
+		    	    		    </div>
+		    	    		</div>
+		    	    	</div>
+		    	    </div>
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>

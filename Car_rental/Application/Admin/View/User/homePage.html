@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/homePage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+					<li><a href="#"><i>修改用户信息</i></a></li>
+					<li><a href="#"><i>邮件集体分发</i></a></li>
+
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+					<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+					<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+					<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+					<li><a href="/Car/CarManage"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper">
+		    	<div class="page-wrapper-main">
+		    		<h1>User Information View</h1>
+		    		<div class="show-MemIfo">
+		    			<ul>
+		    				<li>
+		    					<label class="show-Ifoin1">用户名称</label>
+		    					<span class="show-Ifosp">
+	                            <input class="show-Ifoinput" type="text" id="UserName"  disabled="disabled">
+	                            </span>
+	                            <label class="show-Ifoin2">用户密码</label>
+		    					<span class="show-Ifosp">
+	                            <input class="show-Ifoinput" id="PassWord" type="text"  disabled="disabled">
+	                            </span>
+		    				</li>
+		    				<li>
+		    					<label class="show-Ifoin1">真实姓名</label>
+		    					<span class="show-Ifosp">
+	                            <input class="show-Ifoinput" id="Mem_Name" type="text" disabled="disabled">
+	                            </span>
+	                            <label class="show-Ifoin2">证件号码</label>
+		    					<span class="show-Ifosp">
+	                            <input class="show-Ifoinput" id="Mem_Card" type="text"  disabled="disabled">
+	                            </span>
+		    				</li>
+		    				<li>
+		    					<label class="show-Ifoin1">电子邮箱</label>
+		    					<span class="show-Ifosp">
+	                            <input class="show-Ifoinput" id="Mem_Email" type="text"  disabled="disabled">
+	                            </span>
+	                            <label class="show-Ifoin2">手机号码</label>
+		    					<span class="show-Ifosp">
+	                            <input class="show-Ifoinput" id="Mem_Tel" type="text"  disabled="disabled">
+	                            </span>
+		    				</li>
+		    			</ul>
+    		    
+		    		</div>
+		    	 	<div class="graybutbox">
+		                <a href="javascript:void(0);" class="Ifo-sbm-but" id="zcsave">编辑</a>
+		            </div>
+		    	    <div class="search-table-box">
+		    	    	<div class="search-table-main">
+		    	    		<div class="search-table">
+		    	    			<div class="panel-heading">用户查询</div>
+		    	    			<div class="seacrh-line">
+		    	    				<div class="seacrh-line-inner">
+											<span>Search:</span>
+											<select class="chooseSel" name="method">
+												<option selected="selected">请选择您要查询的方式</option>
+												<option value="MemberID">MemberID</option>
+												<option >MemberUserName</option>
+												<option >MemberNickName</option>
+											</select>
+											<input type="text" name="mem_search" class="searchInput" id="searchInput"/>
+											<input type="button" value="查询" class="submitInput" id="submitBut" onclick="searchBut()"/>
+
+		    	    				</div>
+		    	    			</div>
+		    	    		    <table class="table-mian" border="1">
+		    	    		    	<thead>
+                                        <tr >
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1" aria-sort="ascending"  style="width: 169px;">会员用户名</th>
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 250px;">会员用户昵称</th>
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 280px;">会员用户姓名</th>
+                                        	<th class="table-sorting" tabindex="0"  rowspan="1" colspan="1"  style="width: 275px;">操作方式</th>
+                                        </tr>
+                                    </thead>
+		    	    		        <tbody>
+
+									<foreach name="Mem" item="v">
+                                        <tr class="gradeAeven" style="z-index: 999">
+                                            <td class="table-td">{$v.username}</td>
+                                            <td class="table-td">{$v.mem_nickname}</td>
+                                            <td class="table-td">{$v.mem_name}</td>
+                                            <td class="table-td action">
+                                            	<a href="javascript:void(0)">删除用户</a> |
+                                            	<a href="javascript:void(0) " onclick="searchIfo('{$v.mem_id}')">查看信息</a> |
+                                            	<a href="javascript:void(0) " onclick="turnToOrder('{$v.mem_name}')">查看订单</a>
+                                            </td>
+                                        </tr>
+									</foreach>
+										<tr class="gradeAodd"  style="height: 46px;visibility: hidden">
+											<td class="table-td" id="td-one"></td>
+											<td class="table-td" id="td-two"></td>
+											<td class="table-td" id="td-three"></td>
+											<td class="table-td action">
+												<a href="javascript:void(0)">删除用户</a> |
+												<a href="javascript:void(0) "  id="td-four" >查看信息</a> |
+												<a href="javascript:void(0) "  id="td-five">查看订单</a>
+											</td>
+										</tr>
+		    	    		        </tbody>
+		    	    		    </table>
+		    	    		    <div class="fenye-line">
+		    	    		    	<div class="fenye-main">
+										<if  condition= "$_GET['pageAll'] neq 1 "  >
+											<a href="/Order/OrderPage?pageAll={$_GET['pageAll']-1}">Previous</a>
+										</if>
+										<for start="1" end="$PageAll['count_page']+1" >
+											<a href="/Order/OrderPage?pageAll={$i}">{$i}</a>
+										</for>
+		    	    		    		<a href="###">4</a>
+										<if  condition= "$_GET['pageAll'] neq $PageAll['count_page'] "  >
+											<a href="/Order/OrderPage?pageAll={$_GET['pageRun']+1}">Next</a>
+										</if>
+		    	    		    	</div>
+		    	    		    </div>
+		    	    		</div>
+		    	    	</div>
+		    	    </div>
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>

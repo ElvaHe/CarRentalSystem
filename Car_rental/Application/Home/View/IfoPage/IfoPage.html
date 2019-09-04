@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://www.car_rental.com/scripts/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://www.car_rental.com/styles/IfoPage.css"/>
+		<script src="http://www.car_rental.com/scripts/IfoPage.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+{$Page['count_page']}
+		<!--head start-->
+		<div id="head_bd">
+			<div class="zc-head-main">
+				<a href="###" class="zc_logo" alt="神州租车"></a>
+				<ul class="zc-head-menu">
+					<li><a href="/HomePage/HomePage">首页</a></li>
+					<li><a href="/IfoPage/IfoPage#orderAll">我的订单</a></li>
+					<li><a href="/Carlist/carlist">我要租车</a></li>
+					<li><a href="/IfoPage/IfoPage#orderMes">基本信息</a></li>
+					<li><a href="###">门店</a></li>
+					<li><a href="/Login/Login">退出登录</a></li>
+				</ul>
+				<div class="zc-head-index">
+					<div class="zc-head-ifo">
+						<h1 id="topLoginName">
+							你好，Hucker&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="###">我的神州</a>
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--head end-->
+		<!--my head start-->
+		<div class="zc-myhead">
+			<div class="zc-myhead-main">
+				<div class="myhead-weather">
+					<span><i class="sssd"></i></span>
+					<div class="weatherIfo">
+						<iframe width="170" scrolling="no" height="30"
+							 frameborder="0" 
+							allowtransparency="true" 
+							src="http://i.tianqi.com/index.php?c=code&amp;id=99">
+						</iframe>
+					</div>
+				</div>
+			    <div class="myhead-myIfo">
+			    	<div class="mm_hpicon" id="hpicon">
+				        <i class="ordinary_m_icon"></i>
+			    	</div>
+			        <div class="mm_hip">
+			        	<span class="mm_name">
+			        		尊贵的黄金会员:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			        		Hucker<br/>
+			        		<span class="mm_jb" id="mm_jb">超级黄金会员卡</span>
+			        	</span>
+			        </div>
+			        
+			    </div>
+			</div>
+		</div>
+		<!--my head end-->
+		<div class="clearboth"></div>
+		<!--Ifo main-->
+		<div class="zc-Ifo-box">
+			<div class="zc-Ifo-LeftBox" >
+					<dl class="Ifo-dl">
+						<dt>我的订单</dt>
+						<dd class="optdd">
+							<a class="Ifo-dl-a" href="javascript:void(0)" onclick="choose(this,'IfoOrdAll')">
+								全部订单 
+		            	      <span>({$ordercount[4]})</span>
+							</a>
+						</dd>
+						<dd class="optdd">
+							<a class="Ifo-dl-a" href="###" onclick="choose(this,'IfoOrdSuc')">
+								预定成功 
+		            	      <span>({$ordercount[1]})</span>
+							</a>
+						</dd>
+						<dd class="optdd">
+							<a class="Ifo-dl-a" href="###" onclick="choose(this,'IfoOrdRun')">
+								租赁中 
+		            	      <span>({$ordercount[2]})</span>
+							</a>
+						</dd>
+						<dd  class="optdd">
+							<a class="Ifo-dl-a" href="###" onclick="choose(this,'IfoOrdAlr')">
+								已完成 
+		            	      <span>({$ordercount[3]})</span>
+							</a>
+						</dd>
+						<dd class="optdd">
+							<a class="Ifo-dl-a" href="###" onclick="choose(this,'IfoOrdCan')">
+								已取消
+		            	      <span>({$ordercount[0]})</span>
+							</a>
+						</dd>
+					</dl>
+					<dl class="Ifo-dl">
+						<dt>基本信息</dt>
+						<dd class="optdd">
+							<a class="Ifo-dl-a" href="###" onclick="choose(this,'IfoChaPas')">
+								修改密码
+							</a>
+						</dd>
+						<dd class="optdd">
+							<a class="Ifo-dl-a" href="###" onclick="choose(this,'IfoChaMes')">
+								我的信息 
+							</a>
+						</dd>
+					</dl>
+				    <dl class="Ifo-dl">
+						<dt>会员条款</dt>
+						<dd class="optdd">
+							<a class="Ifo-dl-a" href="###" onclick="choose(this)">
+								会员章程
+							</a>
+						</dd>
+						<dd class="optdd">
+							<a href="###" onclick="choose(this)">
+								会员细则 
+							</a>
+						</dd>
+					</dl>
+				</div>
+	        <div class="zc-Ifo-RightBox"  id="IfoOrdAll" style="z-index: 8;">
+	           <div class="zc-order-alllist">
+	           	 <h2>全部订单</h2>
+	           	 <div class="zc-order-query">
+	           	 	<div class="zc-order-qBox">
+	           	 		<div class="query-bt-div">
+	           	 			<input class="query-bt" type="button" value="查询"/>
+	           	 		</div>
+	           	        <div class="quert-finTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	    <div class="fr">-</div>
+	           	 	    <div class="quert-bakTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	</div>
+	           	    <div class="h20"></div>
+	           	 </div>
+	            <div class="zc-order-showBox">
+	           	    	<table class="zc-order-table" cellpadding="0" cellspacing="0" border="0">
+	           	    		<thead>
+	           	    			<tr>
+	                            <th class="al">订单信息</th>
+	                            <th width="197"></th>
+	                            <th class="al" width="263">取/还车信息</th>
+	                            <th class="ac" width="110">总计</th>
+	                            <th class="ac" width="110">订单状态</th>
+	                            </tr>
+	           	    		</thead>
+	           	    	    <tbody>
+							    <foreach name="OrderAll" item="v">
+	           	    	    	<tr>
+	           	    	    		<td>
+	                            		<a href="/Carlist/CarPage?Car_Id={$v.car_id}">
+											<img src="{$v.car_url}" width="166" height="97"  style="padding-right: 10px">
+										</a>
+	                                </td>
+	                                <td class="ol-carinfo">
+		                                <b>{$v.car_name}</b>
+		                                <p>{$v.car_detailna}</p>
+		                                <p>订单号：{$v.order_num}</p>
+										<p>创建时间：{$v.order_cretime}</p>
+	                                </td>
+	           	    	    	    <td>
+	           	    	    	    	<div class="zc-order-place">
+	           	    	    	    		<p class="zctooltipfetch" >
+	                                    		<i class="zc_fetch_i"></i>
+	                                    		厦门 - {$v.order_fetchplace}
+	           	    	    	    		</p>
+	           	    	    	    	    <p class="qhtime">{$v.order_fetchtime} {$v.order_fetchhour}</p>
+	           	    	    	    	    <p class="zctooltipback">
+			                                    <i class="zc_giveback_i"></i>
+			                                    厦门 - {$v.order_backplace}
+	           	    	    	    	    </p>
+	           	    	    	    	    <p class="qhtime">{$v.order_backtime} {$v.order_backhour}</p>
+	           	    	    	    	</div>
+	           	    	    	    </td>
+	           	    	    	    <td>
+		                                <div class="ol-aggregate" >
+		                                    ¥<span>{$v.order_total}</span>
+		                                </div>
+	                                </td>
+	           	    	    	    <td class="status-ac">
+	                            	<span class="s-gray">
+									  <if condition="($v.order_status eq 0)"> 已取消
+										  <elseif condition="($v.order_status eq 1)" />预定成功
+										  <elseif condition="($v.order_status eq 2)" />租赁中
+										  <else /> 订单已完成
+									  </if>
+									</span>
+	                            	     <a href="/Index/orderDetails?order_id={$v.order_num}" class="a-view">查看订单</a>
+	                                </td>
+	           	    	    	</tr>
+								</foreach>
+	           	    	    </tbody>
+	           	    	</table>
+
+						<div class="Ifo-fenye">
+							<div class="Ifo-fenyeMain">
+								<if  condition= "$_GET['pageAll'] neq 1 "  >
+								<a style="float: left;margin-left: 280px" href="/IfoPage/IfoPage?pageAll={$_GET['pageAll']-1}#orderAll">上页</a>
+								</if>
+								<div style="float: left;">{$_GET['pageAll']}/{$PageAll['count_page']}</div>
+								<!--<for start="1" end="$PageAll['count_page']+1"   >-->
+									<!--<a href="/IfoPage/IfoPage?pageAll={$i}#orderAll">{$i}</a>-->
+								<!--</for>-->
+								<if  condition= "$_GET['pageAll'] neq $PageAll['count_page'] "  >
+								<a style="float: left ; text-indent:-1px;width: 80px" href="/IfoPage/IfoPage?pageAll={$_GET['pageAll']+1}#orderAll">下页</a>
+								</if>
+							</div>
+						</div>
+				</div>
+	           </div>
+	        </div>	
+		    <div class="zc-Ifo-RightBox2" id="IfoOrdSuc" style="z-index: 9;">
+	           <div class="zc-order-alllist">
+	           	 <h2>预定成功</h2>
+	           	 <div class="zc-order-query">
+	           	 	<div class="zc-order-qBox">
+	           	 		<div class="query-bt-div">
+	           	 			<input class="query-bt" type="button" value="查询"/>
+	           	 		</div>
+	           	        <div class="quert-finTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	    <div class="fr">-</div>
+	           	 	    <div class="quert-bakTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	</div>
+	           	    <div class="h20"></div>
+	           	 </div>
+	            <div class="zc-order-showBox">
+	           	    	<table class="zc-order-table" cellpadding="0" cellspacing="0" border="0">
+	           	    		<thead>
+	           	    			<tr>
+	                            <th class="al">订单信息</th>
+	                            <th width="197"></th>
+	                            <th class="al" width="263">取/还车信息</th>
+	                            <th class="ac" width="110">总计</th>
+	                            <th class="ac" width="110">订单状态</th>
+	                            </tr>
+	           	    		</thead>
+	           	    	    <tbody>
+							<foreach name="OrderSuccess" item="v">
+								<tr>
+									<td>
+										<a href="/Carlist/CarPage?Car_Id={$v.car_id}">
+											<img src="{$v.car_url}" width="166" height="97"  style="padding-right: 10px">
+										</a>
+									</td>
+									<td class="ol-carinfo">
+										<b>{$v.car_name}</b>
+										<p>{$v.car_detailna}</p>
+										<p>订单号：{$v.order_num}</p>
+										<p>创建时间：{$v.order_cretime}</p>
+									</td>
+									<td>
+										<div class="zc-order-place">
+											<p class="zctooltipfetch" >
+												<i class="zc_fetch_i"></i>
+												厦门 - {$v.order_fetchplace}
+											</p>
+											<p class="qhtime">{$v.order_fetchtime} {$v.order_fetchhour}</p>
+											<p class="zctooltipback">
+												<i class="zc_giveback_i"></i>
+												厦门 - {$v.order_backplace}
+											</p>
+											<p class="qhtime">{$v.order_backtime} {$v.order_backhour}</p>
+										</div>
+									</td>
+									<td>
+										<div class="ol-aggregate" >
+											¥<span>{$v.order_total}</span>
+										</div>
+									</td>
+									<td class="status-ac">
+	                            	<span class="s-gray">
+									  <if condition="($v.order_status eq 0)"> 已取消
+										  <elseif condition="($v.order_status eq 1)" />预定成功
+										  <elseif condition="($v.order_status eq 2)" />租赁中
+										  <else /> 订单已完成
+									  </if>
+									</span>
+										<a href="/Index/orderDetails?order_id={$v.order_num}" class="a-view">查看订单</a>
+									</td>
+								</tr>
+							</foreach>
+	           	    	    </tbody>
+	           	    	</table>
+						<div class="Ifo-fenye">
+							<div class="Ifo-fenyeMain">
+								<if  condition= "$_GET['pageSuc'] neq 1 "  >
+									<a href="/IfoPage/IfoPage?pageSuc={$_GET['pageSuc']-1}#orderSuc">上页</a>
+								</if>
+								<for start="1" end="$PageSuc['count_page']+1"   >
+									<a href="/IfoPage/IfoPage?pageSuc={$i}#orderSuc">{$i}</a>
+								</for>
+								<if  condition= "$_GET['pageSuc'] neq $PageSuc['count_page'] "  >
+									<a href="/IfoPage/IfoPage?pageSuc={$_GET['pageSuc']+1}#orderSuc">下页</a>
+								</if>
+							</div>
+						</div>
+	       	    </div>
+	           </div>
+	        </div>
+	        <div class="zc-Ifo-RightBox2" id="IfoOrdRun" style="z-index: 9;">
+	           <div class="zc-order-alllist">
+	           	 <h2>租赁中</h2>
+	           	 <div class="zc-order-query">
+	           	 	<div class="zc-order-qBox">
+	           	 		<div class="query-bt-div">
+	           	 			<input class="query-bt" type="button" value="查询"/>
+	           	 		</div>
+	           	        <div class="quert-finTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	    <div class="fr">-</div>
+	           	 	    <div class="quert-bakTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	</div>
+	           	    <div class="h20"></div>
+	           	 </div>
+	            <div class="zc-order-showBox">
+	           	    	<table class="zc-order-table" cellpadding="0" cellspacing="0" border="0">
+	           	    		<thead>
+	           	    			<tr>
+	                            <th class="al">订单信息</th>
+	                            <th width="197"></th>
+	                            <th class="al" width="263">取/还车信息</th>
+	                            <th class="ac" width="110">总计</th>
+	                            <th class="ac" width="110">订单状态</th>
+	                            </tr>
+	           	    		</thead>
+	           	    	    <tbody>
+							<foreach name="OrderRun" item="v">
+								<tr>
+									<td>
+										<a href="/Carlist/CarPage?Car_Id={$v.car_id}">
+											<img src="{$v.car_url}" width="166" height="97"  style="padding-right: 10px">
+										</a>
+									</td>
+									<td class="ol-carinfo">
+										<b>{$v.car_name}</b>
+										<p>{$v.car_detailna}</p>
+										<p>订单号：{$v.order_num}</p>
+										<p>创建时间：{$v.order_cretime}</p>
+									</td>
+									<td>
+										<div class="zc-order-place">
+											<p class="zctooltipfetch" >
+												<i class="zc_fetch_i"></i>
+												厦门 - {$v.order_fetchplace}
+											</p>
+											<p class="qhtime">{$v.order_fetchtime} {$v.order_fetchhour}</p>
+											<p class="zctooltipback">
+												<i class="zc_giveback_i"></i>
+												厦门 - {$v.order_backplace}
+											</p>
+											<p class="qhtime">{$v.order_backtime} {$v.order_backhour}</p>
+										</div>
+									</td>
+									<td>
+										<div class="ol-aggregate" >
+											¥<span>{$v.order_total}</span>
+										</div>
+									</td>
+									<td class="status-ac">
+	                            	<span class="s-gray">
+									  <if condition="($v.order_status eq 0)"> 已取消
+										  <elseif condition="($v.order_status eq 1)" />预定成功
+										  <elseif condition="($v.order_status eq 2)" />租赁中
+										  <else /> 订单已完成
+									  </if>
+									</span>
+										<a href="/Index/orderDetails?order_id={$v.order_num}" class="a-view">查看订单</a>
+									</td>
+								</tr>
+							</foreach>
+	           	    	    </tbody>
+	           	    	</table>
+						<div class="Ifo-fenye">
+							<div class="Ifo-fenyeMain">
+								<if  condition= "$_GET['pageRun'] eq 1 "  >
+									<a href="/IfoPage/IfoPage?pageRun=1#orderRun">首页</a>
+									<else />
+									<a href="/IfoPage/IfoPage?pageRun={$_GET['pageRun']-1}#orderRun">上页</a>
+								</if>
+								<for start="1" end="$PageRun['count_page']+1"   >
+									<a href="/IfoPage/IfoPage?pageRun={$i}#orderRun">{$i}</a>
+								</for>
+								<if  condition= "$_GET['pageRun'] neq $PageRun['count_page'] "  >
+									<a href="/IfoPage/IfoPage?pageRun={$_GET['pageRun']+1}#orderRun">下页</a>
+								</if>
+							</div>
+						</div>
+	       	    </div>
+	           </div>
+	        </div>
+		    <div class="zc-Ifo-RightBox2" id="IfoOrdAlr" style="z-index: 9;">
+	           <div class="zc-order-alllist">
+	           	 <h2>已完成</h2>
+	           	 <div class="zc-order-query">
+	           	 	<div class="zc-order-qBox">
+	           	 		<div class="query-bt-div">
+	           	 			<input class="query-bt" type="button" value="查询"/>
+	           	 		</div>
+	           	        <div class="quert-finTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	    <div class="fr">-</div>
+	           	 	    <div class="quert-bakTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	</div>
+	           	    <div class="h20"></div>
+	           	 </div>
+	            <div class="zc-order-showBox">
+	           	    	<table class="zc-order-table" cellpadding="0" cellspacing="0" border="0">
+	           	    		<thead>
+	           	    			<tr>
+	                            <th class="al">订单信息</th>
+	                            <th width="197"></th>
+	                            <th class="al" width="263">取/还车信息</th>
+	                            <th class="ac" width="110">总计</th>
+	                            <th class="ac" width="110">订单状态</th>
+	                            </tr>
+	           	    		</thead>
+	           	    	    <tbody>
+							<foreach name="OrderAlr" item="v">
+								<tr>
+									<td>
+										<a href="/Carlist/CarPage?Car_Id={$v.car_id}">
+											<img src="{$v.car_url}" width="166" height="97"  style="padding-right: 10px">
+										</a>
+									</td>
+									<td class="ol-carinfo">
+										<b>{$v.car_name}</b>
+										<p>{$v.car_detailna}</p>
+										<p>订单号：{$v.order_num}</p>
+										<p>创建时间：{$v.order_cretime}</p>
+									</td>
+									<td>
+										<div class="zc-order-place">
+											<p class="zctooltipfetch" >
+												<i class="zc_fetch_i"></i>
+												厦门 - {$v.order_fetchplace}
+											</p>
+											<p class="qhtime">{$v.order_fetchtime} {$v.order_fetchhour}</p>
+											<p class="zctooltipback">
+												<i class="zc_giveback_i"></i>
+												厦门 - {$v.order_backplace}
+											</p>
+											<p class="qhtime">{$v.order_backtime} {$v.order_backhour}</p>
+										</div>
+									</td>
+									<td>
+										<div class="ol-aggregate" >
+											¥<span>{$v.order_total}</span>
+										</div>
+									</td>
+									<td class="status-ac">
+	                            	<span class="s-gray">
+									  <if condition="($v.order_status eq 0)"> 已取消
+										  <elseif condition="($v.order_status eq 1)" />预定成功
+										  <elseif condition="($v.order_status eq 2)" />租赁中
+										  <else /> 订单已完成
+									  </if>
+									</span>
+										<a href="/Index/orderDetails?order_id={$v.order_num}" class="a-view">查看订单</a>
+									</td>
+								</tr>
+							</foreach>
+	           	    	    </tbody>
+	           	    	</table>
+						<div class="Ifo-fenye">
+							<div class="Ifo-fenyeMain">
+								<if  condition= "$_GET['pageAlr'] eq 1 "  >
+									<a href="/IfoPage/IfoPage?pageAlr=1#orderAlr">首页</a>
+									<else />
+									<a href="/IfoPage/IfoPage?pageAlr={$_GET['pageAlr']-1}#orderAlr">上页</a>
+								</if>
+								<for start="1" end="$PageAlr['count_page']+1"   >
+									<a href="/IfoPage/IfoPage?pageAlr={$i}#orderAlr">{$i}</a>
+								</for>
+								<if  condition= "$_GET['pageAlr'] neq $PageAlr['count_page'] "  >
+									<a href="/IfoPage/IfoPage?pageAlr={$_GET['pageAlr']+1}#orderAlr">下页</a>
+								</if>
+							</div>
+						</div>
+	       	    </div>
+	           </div>
+	        </div>
+	        <div class="zc-Ifo-RightBox2" id="IfoOrdCan" style="z-index: 9;">
+	           <div class="zc-order-alllist">
+	           	 <h2>已取消</h2>
+	           	 <div class="zc-order-query">
+	           	 	<div class="zc-order-qBox">
+	           	 		<div class="query-bt-div">
+	           	 			<input class="query-bt" type="button" value="查询"/>
+	           	 		</div>
+	           	        <div class="quert-finTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	    <div class="fr">-</div>
+	           	 	    <div class="quert-bakTime">
+	           	        	<input type="date" name="" class="query-input"/>
+	           	        </div>
+	           	 	</div>
+	           	    <div class="h20"></div>
+	           	 </div>
+	            <div class="zc-order-showBox">
+	           	    	<table class="zc-order-table" cellpadding="0" cellspacing="0" border="0">
+	           	    		<thead>
+	           	    			<tr>
+	                            <th class="al">订单信息</th>
+	                            <th width="197"></th>
+	                            <th class="al" width="263">取/还车信息</th>
+	                            <th class="ac" width="110">总计</th>
+	                            <th class="ac" width="110">订单状态</th>
+	                            </tr>
+	           	    		</thead>
+	           	    	    <tbody>
+							<foreach name="OrderCan" item="v">
+								<tr>
+									<td>
+										<a href="/Carlist/CarPage?Car_Id={$v.car_id}">
+											<img src="{$v.car_url}" width="166" height="97"  style="padding-right: 10px">
+										</a>
+									</td>
+									<td class="ol-carinfo">
+										<b>{$v.car_name}</b>
+										<p>{$v.car_detailna}</p>
+										<p>订单号：{$v.order_num}</p>
+										<p>创建时间：{$v.order_cretime}</p>
+									</td>
+									<td>
+										<div class="zc-order-place">
+											<p class="zctooltipfetch" >
+												<i class="zc_fetch_i"></i>
+												厦门 - {$v.order_fetchplace}
+											</p>
+											<p class="qhtime">{$v.order_fetchtime} {$v.order_fetchhour}</p>
+											<p class="zctooltipback">
+												<i class="zc_giveback_i"></i>
+												厦门 - {$v.order_backplace}
+											</p>
+											<p class="qhtime">{$v.order_backtime} {$v.order_backhour}</p>
+										</div>
+									</td>
+									<td>
+										<div class="ol-aggregate" >
+											¥<span>{$v.order_total}</span>
+										</div>
+									</td>
+									<td class="status-ac">
+	                            	<span class="s-gray">
+									  <if condition="($v.order_status eq 0)"> 已取消
+										  <elseif condition="($v.order_status eq 1)" />预定成功
+										  <elseif condition="($v.order_status eq 2)" />租赁中
+										  <else /> 订单已完成
+									  </if>
+									</span>
+										<a href="/Index/orderDetails?order_id={$v.order_num}" class="a-view">查看订单</a>
+									</td>
+								</tr>
+							</foreach>
+	           	    	    </tbody>
+	           	    	</table>
+						<div class="Ifo-fenye">
+							<div class="Ifo-fenyeMain">
+								<if  condition= "$_GET['pageCan'] eq 1 "  >
+									<a href="/IfoPage/IfoPage?pageCan=1#orderCan">首页</a>
+									<else />
+									<a href="/IfoPage/IfoPage?pageCan={$_GET['pageCan']-1}#orderCan">上页</a>
+								</if>
+								<for start="1" end="$PageCan['count_page']+1"   >
+									<a href="/IfoPage/IfoPage?pageCan={$i}#orderCan">{$i}</a>
+								</for>
+								<if  condition= "$_GET['pageCan'] neq $PageCan['count_page'] "  >
+									<a href="/IfoPage/IfoPage?pageCan={$_GET['pageAlr']+1}#orderCan">下页</a>
+								</if>
+							</div>
+						</div>
+	       	    </div>
+	           </div>
+	        </div>
+		    <div class="zc-Ifo-RightBox2" id="IfoChaPas" style="z-index: 9;">
+	           <div class="zc-order-alllist">
+	           	 <h2>修改密码</h2>
+	           	 <form method="post" action="">
+	           	  <div class="modifyPas">
+	           	 	<ul>
+	           	 		<li>
+	                        <label class="modifyPas-beg">原密码</label>
+	                        <span class="modifyPas-beg">
+	                            <input class="ipt-passwordS" type="text"  placeholder="请输入原来密码">
+	                        </span>
+	                        <div class="modifyPas-Tip">核对身份后，才可修改密码</div>
+	                        <div class="clear"></div>
+                        </li>
+                        <li>
+	                        <label class="modifyPas-beg">新密码</label>
+	                        <span class="modifyPas-beg">
+	                            <input class="ipt-passwordS" type="text"  placeholder="建议6-18位数字、字母、符号的组合密码">
+	                        </span>
+	                        <div class="modifyPas-Tip">请牢记新密码</div>
+	                        <div class="clear"></div>
+                        </li>
+                        <li>
+	                        <label class="modifyPas-beg">确认密码</label>
+	                        <span class="modifyPas-beg">
+	                            <input class="ipt-passwordS" type="text" id="oldpassword" placeholder="再次输入密码">
+	                        </span>
+	                        <div class="modifyPas-Tip">再次输入新密码</div>
+	                        <div class="clear"></div>
+                        </li>
+	           	 	</ul>
+	           	 	<div class="graybutbox">
+                    	<a href="javascript:void(0);" class="Ifo-sbm-but" >保存</a>
+                    </div>
+	           	  </div>
+	             </form> 	    
+	           </div>
+	        </div>
+		    <div class="zc-Ifo-RightBox2" id="IfoChaMes" style="z-index: 9;">
+	           <div class="zc-order-alllist">
+	           	 <h2>我的信息</h2>
+	           	 <form method="post" action="IfoChaMes_action" id="myMes">
+		           	  <div class="modifyPas">
+			           	 	<ul>
+			           	 		<li>
+			                        <label class="modifyPas-beg">姓名</label>
+			                        <span class="modifyPas-beg">
+			                            <input name="Mem_Name" class="ipt-passwordS" type="text" id="mem_name" value="{$Mem['mem_name']}" placeholder="请输入真实姓名">
+			                        </span>
+			                        <div class="modifyPas-Tip">真实姓名，方便租车时核对身份</div>
+			                        <div class="clear"></div>
+		                        </li>
+		                        <li>
+			                        <label class="modifyPas-beg">证件</label>
+			                        <span class="modifyPas-beg">
+			                            <input  name="Mem_Card" class="ipt-passwordS" value="{$Mem['mem_card']}" type="text" id="mem_identity" placeholder="请完善您的证件号码">
+			                        </span>
+			                        <div class="modifyPas-Tip">请输入您的驾驶证/身份证号</div>
+			                        <div class="clear"></div>
+		                        </li>
+		                        <li>
+			                        <label class="modifyPas-beg">手机号码</label>
+			                        <span class="modifyPas-beg">
+			                            <input name="Mem_TelNum" class="ipt-passwordS" value="{$Mem['mem_telnum']}" type="text" placeholder="请输入您的11位手机号">
+			                        </span>
+			                        <div class="modifyPas-Tip">真实姓名，方便租车时与您联系</div>
+			                        <div class="clear"></div>
+		                        </li>
+		                        <li>
+			                        <label class="modifyPas-beg">NickName</label>
+			                        <span class="modifyPas-beg">
+			                            <input name="Mem_NickName" class="ipt-passwordS" type="text" value="{$Mem['mem_nickname']}" placeholder="您还没设置昵称，请输入">
+			                        </span>
+			                        <div class="modifyPas-Tip">请输入您的账户昵称</div>
+			                        <div class="clear"></div>
+		                        </li>
+		                        <li>
+			                        <label class="modifyPas-beg">邮箱</label>
+			                        <span class="modifyPas-beg">
+			                            <input name="Mem_Email" class="ipt-passwordS" value="{$Mem['mem_email']}" type="text"  placeholder="请正确输入您的邮箱">
+			                        </span>
+			                        <div class="modifyPas-Tip">公司将定期发资讯予您</div>
+			                        <div class="clear"></div>
+		                        </li>
+			           	 	</ul>
+						    <input style="position: absolute;visibility: hidden" type="text" name="Mem_Id" value="{$Mem['mem_id']}"/>
+			           	 	<div class="graybutbox">
+		                    	<a href="javascript:void(0);" class="Ifo-sbm-but" id="modify">修改</a>
+								<a href="javascript:void(0);"  class="Ifo-sbm-but" id="submitbut">保存</a>
+		                     </div>
+		           	  </div>
+	             </form>
+	       	    
+	           </div>
+	        </div>
+		</div>
+		<!--Ifo main end-->
+		<div class="clearboth"></div>
+		 <!--foot-->
+	    <div class="zc-footmenu">
+	      		<div class="zc_main2">
+	      		<dl class="wyd">
+	      			<dt>租车预定说明</dt>
+	      			<dd>
+	      				<a href="###">服务时间</a>
+	      				<a href="###">服务地点</a>
+	      				<a href="###">租车资格</a>
+	      				<a href="###">取还车说明</a>
+	      			</dd>
+	      		</dl>
+	      		<dl class="why">
+	      			<dt>会员管理</dt>
+	      			<dd>
+	      				<a href="###">会员章程</a>
+	      			</dd>
+	      		</dl>
+	      		<dl class="wsj">
+	            <dt>紧急事务处理</dt>
+	            <dd>
+	                <a target="_blank" href="###">保险责任</a>
+	                <a target="_blank" href="###">理赔说明</a>
+	                <a target="_blank" href="###">事故处理</a>
+	                <a target="_blank" href="###" style="clear:both;">救援及备用车</a>
+	            </dd>
+	            </dl>
+	            <dl class="wfy">
+	            <dt>租车费用及结算</dt>
+	            <dd>
+	                <a target="_blank" href="###">价格说明</a>
+	                <a target="_blank" href="###">结算流程</a>
+	                <a target="_blank" href="###">储值卡</a>
+	            </dd>
+	            </dl>
+	            <dl class="wbz">
+	            <dt>帮助中心</dt>
+	            <dd>
+	                <a target="_blank" href="http://help.zuche.com/xssl/">常见问题</a>
+	                <a target="_blank" href="http://help.zuche.com/cjwt/">新手上路</a>
+	                <a target="_blank" href="http://help.zuche.com/fwgz/">服务规则 </a>
+	            </dd>
+	            </dl>
+	      		</div>	
+		 </div>
+        <!--foot end-->
+        <div class="zc-footer">
+      		<div class="zc_main">		
+	      		<div class="ainfor">
+		            <a title="关于我们" href="http://huodong.zuche.com/gywm/">关于我们</a>
+		            <a title="投资者关系" target="_blank" href="http://ir.zuche.com">投资者关系</a>
+		            <a target="_parent" title="新闻中心" href="http://news.zuche.com/">新闻中心</a>
+		            <a title="加盟合作" target="_blank" href="http://jiameng.zuche.com">加盟合作</a>
+		            <a title="隐私保护" target="_parent" href="http://huodong.zuche.com/ysbh/">隐私保护</a>
+		            <a title="网站导航" target="_parent" href="http://help.zuche.com/sitemap/">网站导航</a>
+		            <a title="联系我们" target="_parent" href="http://huodong.zuche.com/lxwm/">联系我们</a>
+		            <a title="招贤纳士" target="_blank" href="http://hr.zuche.com/">招贤纳士</a>
+		            <a target="_blank" href="http://en.zuche.com" class="eng_wz">English<i class="eng_icon"></i></a>
+            </div>
+            
+            <div class="zc-copyright">
+            	<p class="fl">Copyright©2008-2016 www.zuche.com All Rights Reserved.　神州租车官网 京ICP备10005002号   京公网安备号 11010502026705</p>
+                <p class="pt10">
+                <a target="_blank" tabindex="-1" id="urlknet" class="sz_k"></a>
+                <a target="_blank" id="___szfw_logo___"  title="诚信网站" class="sz_c"></a>
+                </p>
+            </div>
+      	</div>
+        </div>
+	</body>
+</html>

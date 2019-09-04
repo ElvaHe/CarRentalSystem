@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/orderManage.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderManage.css"/>
+
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+					<li><a href="#"><i>修改用户信息</i></a></li>
+					<li><a href="#"><i>邮件集体分发</i></a></li>
+
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+					<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+					<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+					<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+					<li><a href="/Car/CarManage"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper">
+		    	<div class="page-wrapper-main">
+		    		<h1>进行订单操作</h1>
+		    		<div class="orderMan-showIfo " style="height: 630px">
+		    			<ul>
+		    				<li class="orderMan-One" style="height:98px;">
+		    					<label class="orderMan-Ifoin1">车辆信息：</label>
+		    					<img src="{$Car['car_url']}" width="166" height="97">
+		    				    <table border="0" >
+		    				    	<tr>
+		    				    		<td class="td-1">品&nbsp;&nbsp;&nbsp;牌:</td>
+		    				    		<td class="td-2">{$Car['car_brand']}</td>
+		    				    		<td class="td-1">车&nbsp;&nbsp;&nbsp;系:</td>
+		    				    		<td class="td-2">{$Car['car_sort']}</td>
+		    				    	</tr>
+		    				    	<tr>
+		    				    		<td class="td-1">车门数:</td>
+		    				    		<td class="td-2">{$Car['car_door']}</td>
+		    				    		<td class="td-1">座位数:</td>
+		    				    		<td class="td-2">{$Car['car_seatnum']}</td>
+		    				    	</tr>
+		    				    	<tr>
+		    				    		<td class="td-1">价&nbsp;&nbsp;&nbsp;格:</td>
+		    				    		<td class="td-2">{$Car['car_price']}</td>
+		    				    		<td class="td-1">座&nbsp;&nbsp;&nbsp;椅:</td>
+		    				    		<td class="td-2">{$Car['car_seatsort']}</td>
+		    				    	</tr>
+		    				    </table>
+		    				</li>
+		    				<li class="orderMan-Two" style="height:60px;">
+		    					<label>订单时间：</label>
+		    					<i class="zc_fetch_i"></i>	
+		    					<span class="qhtime">{$Car['order_fetchtime']}&nbsp;{$Car['order_fetchhour']}</span>
+		    					<i class="zc_giveback_i"></i>	
+		    					<span class="qhtime">{$Car['order_backtime']}&nbsp;{$Car['order_backhour']}</span>
+		    				</li>
+		    				<li class="orderMan-Three" style="height:60px;">
+		    					<label>订单地点：</label>
+		    					<i class="zc_fetch_i"></i>	
+		    					<span class="qhtime">厦门 - {$Car['order_fetchplace']} </span>
+		    					<i class="zc_giveback_i_1"></i>	
+		    					<span class="qhtime"> 厦门 -{$Car['order_backplace']}</span>
+		    				</li>
+		    				<li class="orderMan-Four" style="height:60px; ">
+		    					<label>订单编号：</label>
+		    					<span class="ordernum">{$Car['order_num']}</span>
+
+		    				</li>
+							<li class="orderMan-Four" style="height:60px; ">
+								<label>订单状态：</label>
+								<span class="ordernum">
+									<if condition="($Car['order_status'] eq 0)">
+										<input value="订单已取消" id="Order_Status0" style="background: none ;border: 0px; width: 200px" />
+										<elseif condition="($Car['order_status'] eq 1)" />
+										<input value="预定成功" id="Order_Status1" style="background: none ;border: 0px; width: 200px" />
+										<elseif condition="($Car['order_status'] eq 2)" />
+										<input value="租赁中" id="Order_Status2" style="background: none ;border: 0px; width: 200px" />
+										<else />
+										<input value="订单已完成" id="Order_Status3" style="background: none ;border: 0px; width: 200px" />
+									</if>
+								</span>
+
+							</li>
+							<li class="orderMan-Four" style="height:60px; ">
+								<label>订单用户：</label>
+								<span class="ordernum">{$Mem['mem_name']}</span>
+
+							</li>
+		    				<li class="orderMan-Five" style="height:200px; ">
+		    					<label>订单价格：</label>
+		    					<div class="orderMan-Five-One">
+		    					<span class="ordernum">车辆租赁费及门店服务费:{$Car['order_days']*$Car['car_price']}元</span>
+		    					<span class="ordernum1">注释：日租价格×天数 = 车辆租赁费及门店服务费</span>
+		    					</div>
+		    					<div class="orderMan-Five-Two">
+		    					<span class="ordernum">基本保险费用:{$Car['order_days']*40}元</span>
+		    					<span class="ordernum1" style="margin-left: 248px;">注释：40×天数 = 车基本保险费用</span>
+		    					</div>
+		    					<div class="orderMan-Five-Three">
+		    					<span class="ordernum">其它费用:35元</span>
+		    					<span class="ordernum1" style="margin-left: 273px;">注释：服务费用包括在内的其它费用</span>
+		    					</div>
+		    					<div class="orderMan-Five-Four">
+		    					<span class="ordernum2">总计：</span>
+		    					<span class="ordernum3">{$Car['order_total']}</span>
+		    					</div>
+		    				</li>
+		    			</ul>  		    
+		    		</div>
+		    	 	<div class="ordergraybutbox">
+						<if condition="($Car['order_status'] eq 0)">
+								<a href="/Order/orderrecovery_action?Order_Num={$Mem['order_num']}" class="orderman-Ifo-sbm-but" style="margin-left: 300px">
+									恢复该订单</a>
+								<a href="/Order/orderModify?Order_Num={$Mem['order_num']}" class="orderman-Ifo-sbm-but" >修改该订单</a>
+							<elseif condition="($Car['order_status'] eq 1)" />
+								<a href="/Order/orderCancel_action?Order_Num={$Mem['order_num']}" class="orderman-Ifo-sbm-but" >取消该订单</a>
+								<a href="/Order/orderPay_action?order_status={$Mem['order_status']}&&Order_Num={$Mem['order_num']}" class="orderman-Ifo-sbm-but" >支付该订单</a>
+							    <a href="/Order/orderModify?Order_Num={$Mem['order_num']}"class="orderman-Ifo-sbm-but" >修改该订单</a>
+							<elseif condition="($Car['order_status'] eq 2)" />
+								<a href="/Order/orderModify?Order_Num={$Mem['order_num']}" class="orderman-Ifo-sbm-but"  style="margin-left: 450px">
+									修改该订单
+								</a>
+							<elseif condition="($Car['order_status'] eq 3)" />
+								<a href="javascript:void(0);" class="orderman-Ifo-sbm-but" >删除该订单</a>
+								<a href="/Order/orderModify?Order_Num={$Mem['order_num']}" class="orderman-Ifo-sbm-but" >修改该订单</a>
+						</if>
+
+		            </div>
+		    	    
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>

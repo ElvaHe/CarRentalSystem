@@ -1,0 +1,145 @@
+.show-OrderIfo{
+	height: 200px;
+	padding: 20px 0px 12px 0px;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    background: #fff;
+}
+/*上半部分订单的具体显示*/
+.zc-order-table{
+	margin: 15px 0;
+    width: 100%;
+    border-color: grey;
+}
+.zc-order-table thead{
+    background-color: #f8f8fa;
+}
+.al{
+	font-family: "微软雅黑";
+    padding-left: 17px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f8f8fa;
+    font-size: 12px;
+    color: #93939e;
+    font-weight: 400;
+}
+.ac{
+	font-family: "微软雅黑";
+    height: 30px;
+    line-height: 30px;
+    background-color: #f8f8fa;
+    font-size: 12px;
+    color: #93939e;
+    font-weight: 400;
+    padding-left: 17px;
+    text-align: left;
+}
+.zc-order-table td{
+    position: relative;
+    padding-top: 29px;
+    padding-bottom: 29px;
+}
+.ol-carinfo{
+	margin-left: 10px;
+}
+.ol-carinfo b {
+    font-size: 13px;
+    color: #60606c;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.ol-carinfo p {
+	font-family: arial;
+	margin-top: 10px;
+    font-size: 12px;
+    color: #93939e;
+}
+.zc-order-place {
+    cursor: default;
+    border-left: 1px dotted #e9ebee;
+    border-right: 1px dotted #e9ebee;
+    min-height: 100px;
+    padding: 0 20px;
+}
+.zctooltipfetch {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-family: "微软雅黑";
+    position: relative;
+    font-size: 12px;
+    color: #60606c;
+    padding-left: 24px;
+}
+.zc_fetch_i {
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon_2.png) -170px -235px no-repeat;
+}
+.qhtime {
+    font-family: "微软雅黑";
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    font-size: 12px;
+    color: #93939e;
+    padding-left: 24px;
+    padding-bottom: 6px;
+}
+.zctooltipback {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    display: block;
+    font-family: "微软雅黑";
+    position: relative;
+    font-size: 12px;
+    color: #60606c;
+    padding-left: 24px;
+}
+.zc_giveback_i {
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon_2.png) -170px -262px no-repeat;
+}
+.ol-aggregate {
+    font-size: 18px;
+    line-height: 100px;
+    text-align: center;
+}
+.ol-aggregate span{
+    font-size: 18px;
+    line-height: 100px;
+    text-align: center;
+}
+.zc-order-table td {
+    position: relative;
+    padding-top: 29px;
+    padding-bottom: 29px;
+}
+.s-gray {
+    font-family: "微软雅黑";
+    color: #93939e;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+.ol-aggregate {
+    font-family: "微软雅黑";
+    height: 102px;
+    border-right: 1px dotted #e9ebee;
+    font-size: 18px;
+    line-height: 100px;
+    text-indent: -50px;
+}

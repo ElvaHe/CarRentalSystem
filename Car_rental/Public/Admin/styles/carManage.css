@@ -1,0 +1,279 @@
+.carMan-showIfo{
+	height: 381px;
+    padding: 5px 10px 12px 20px;
+    border-radius: 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    background: #fff;
+}
+.carMan-showIfo ul{
+	display: block;
+	margin-top: 35px;
+    border-top: 1px solid #e9ebee;
+    list-style: none;
+    padding: 0;
+}
+.carMan-showIfo li{
+	float: left;
+	width: 100%;
+    height: 59px;
+    border-bottom: 1px solid #e9ebee;
+}
+
+/*第一*/
+.orderMan-One-span{
+	font-family:arial;
+	display: block;
+	float: left;
+	margin-left: 120px;
+	margin-top: 38px;
+	font-size: 20px;
+	color:#F09B22;
+	font-weight: bold;
+}
+.orderMan-One-small{
+	font-family:arial;
+	display: block;
+	float: left;
+	margin-left: 5px;
+	margin-top: 42px;
+	font-size: 15px;
+	color:#F09B22;
+	font-weight: bold;
+}
+/*第二*/
+.CarMan-Two label{
+	font-family: "微软雅黑";
+    line-height: 62px;
+    width: 100px;
+    margin-left: 30px;
+    padding-left: 15px;
+    font-size: 15px;
+    color: #60606c;
+    float: left;
+    cursor: default;
+}
+.CarMan-Two table{
+	font-size: 13px;
+	width: 550px;
+	float: left;
+	margin-top: 5px;
+}
+.CarMan-Two td{
+	font-size: 13px;
+	font-family: arial;
+	height: 45px;
+}
+.CarMan-td-1{
+	font-size: 13px;
+	text-align: left;
+	width: 70px;
+}
+.CarMan-td-2{
+	line-height: 50px;
+	font-size: 13px;
+	text-indent: 25px;
+	width: 120px;
+}
+
+
+/*第三行*/
+.CarMan-Three label{
+	font-family: "微软雅黑";
+    line-height: 62px;
+    width: 100px;
+    margin-left: 30px;
+    padding-left: 15px;
+    font-size: 15px;
+    color: #60606c;
+    float: left;
+    cursor: default;
+}
+.CarMan-Three table{
+	font-size: 13px;
+	width: 820px;
+	float: left;
+	margin-top: 5px;
+}
+.CarMan-Three td{
+	font-size: 13px;
+	font-family: arial;
+	height: 25px;
+}
+.CarMan-td-1{
+	
+	height: 25px;
+	font-size: 13px;
+	text-align: left;
+	width: 70px;
+}
+
+.CarMan-td-3{
+	text-align: left;
+	line-height: 30px;
+	font-size: 13px;
+	width: 80px;
+}
+/*第四行*/
+.CarMan-Four label{
+	font-family: "微软雅黑";
+    line-height: 62px;
+    width: 100px;
+    margin-left: 30px;
+    padding-left: 15px;
+    font-size: 15px;
+    color: #60606c;
+    float: left;
+    cursor: default;
+}
+.CarMan-Four-Pr{
+	color:#F09B22;
+	float: left;
+	margin-left: 20px;
+	line-height: 65px;
+	display: block;
+	font-family: arial;
+	font-size: 13px;
+	
+}
+/*图标*/
+.pp{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0 0; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.cx{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -22px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.ndk{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -44px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.pzk{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -66px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.zw{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -88px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.cm{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -110px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.rll{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -132px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.bsx{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -154px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.pl{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -172px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.ryh{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -195px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.qd{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -215px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.fdj{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -233px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.tc{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -250px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.yxrl{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -288px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.yx{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -309px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.zy{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -329px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.dxld{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -350px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.qn{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -373px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.dvd{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -395px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+.gps{
+	margin-left: 20px;
+	background: url(../images/orderCarInforbg.png) no-repeat 0px -416px; 
+	display: inline-block;
+    width: 20px;
+    margin-right: 5px;
+}
+/*---*/

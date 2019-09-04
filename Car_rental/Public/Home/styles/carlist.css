@@ -1,0 +1,628 @@
+body{
+    background-color: #f2f3f5;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+label{
+    cursor: default;
+}
+.zc-form-box{
+    float: left;
+    position: relative;
+    min-width: 1200px;
+    width: 100%;
+    height: 127px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(228,230,233,1);
+}
+#firstOrderInfo{
+    height: auto;
+}
+.zc-form-main{
+    font-family: "microsoft yahei";
+    padding: 20px 0;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.zc-form-fl{
+    float: left;
+}
+.zc-form-choose{
+    float: left;
+    width: 1035px;
+}
+.zc-form-choose1{
+    float: left;
+}
+.c-car{
+    width: 59px;
+    font-size: 14px;
+    color: #2f2f39;
+    border: 1px solid #e9ebee;
+    border-right: 0;
+    display: inline-block;
+    float: left;
+    line-height: 38px;
+    text-align: center;
+}
+.zc-form-input{
+    font-family: "microsoft yahei";
+    float: left;
+    width: 132px;
+    color: #60606c;
+    font-size: 14px;
+    padding: 10px;
+    border-color: #e9ebee;
+    border-style: solid;
+    border-width: 1px;
+    height: 18px;
+    background: url(../img/input_down.png) center right no-repeat #fff;
+}
+.zc-form-input2{
+    font-family: "microsoft yahei";
+    float: left;
+    width: 193px;
+    color: #60606c;
+    font-size: 14px;
+    padding: 10px;
+    border-color: #e9ebee;
+    border-style: solid;
+    border-width: 1px;
+    height: 18px;
+    background: url(../img/input_down.png) center right no-repeat #fff;
+}
+.zc-form-choose2{
+    float: left;
+    margin-left: 100px;
+    position: relative;
+}
+.c-data{
+    font-family: "microsoft yahei";
+    display: block;
+    float: left;
+    line-height: 38px;
+    width: 86px;
+    font-size: 14px;
+    color: #2f2f39;
+    border: 1px solid #e9ebee;
+    border-right: 0;
+}
+.zc-form-choose3{
+    float: left;
+    margin-top: 10px;
+}
+.zc-form-choose4{
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.zc-form-fr{
+    float: left;
+    height: 90px;
+    width: 160px;
+}
+.zc-form-time-box{
+    float: left;
+    width: 100%;
+    height: 40px;
+}
+.zc-form-time-box i{
+    color: #939a9f;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 12px;
+    display: block;
+    font-style: normal;
+    text-align: center;
+}
+.zc-form-time{
+    color: #ff8650;
+    font-style: normal;
+}
+.zc-form-reset{
+    display: block;
+    border-radius: 3px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    width: 164px;
+    background-color: #fabe00;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.zc-form-reset:hover{
+    background-color: #ff8650;
+}
+/*时间表 结束*/
+.zc-listmain{
+    padding-top: 15px;
+    padding-bottom: 35px;
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+/*租车列表左半边left*/
+.zc-listmain-left{
+    width: 268px;
+    float: left;
+}
+.zc-listmain-leftchoose{
+    position: relative;
+    top: 20px;
+    width: 268px;
+    z-index: 9;
+    box-shadow: 0 0 5px rgba(228,230,233,1);
+}
+.left-cartype{
+    border-bottom: 1px solid #e7e8e9;
+    color: #93939e;
+    background-color: #fff;
+}
+.left-title{
+    font-family: "微软雅黑";
+    line-height: 42px;
+    font-size: 14px;
+    color: #60606c;
+    padding-left: 15px;
+    display: block;
+    margin: 0;
+
+}
+.chexing{
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 0 11px;
+    list-style: none;
+}
+.left-cartype-li{
+    width: 76px;
+    margin-left: 10px;
+    float: left;
+    text-align: center;
+}
+.left-cartype-defult{
+    color: #93939e;
+    display: inline-block;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+.zc_cx_bx{
+    height: 20px;
+    width: 29px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -8px -41px no-repeat;
+}
+.cartxt{
+    display: block;
+    line-height: 24px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: arial;
+}
+.zc_cx_sdjc{
+    height: 20px;
+    width: 45px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -48px -14px no-repeat;
+}
+.zc_cx_jjx{
+    height: 20px;
+    width: 51px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -100px -14px no-repeat;
+}
+.zc_cx_swx{
+    height: 20px;
+    width: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -160px -14px no-repeat;
+}
+.zc_cx_hhx{
+    height: 20px;
+    width: 61px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -220px -14px no-repeat;
+}
+.zc_cx_suv{
+    height: 20px;
+    width: 47px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -290px -14px no-repeat;
+}
+.zc_cx_615{
+    height: 20px;
+    width: 49px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -352px -14px no-repeat;
+}
+.zc_cx_gx{
+    height: 20px;
+    width: 47px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -470px -14px no-repeat;
+}
+.zc_cx_ddc{
+    height: 20px;
+    width: 42px;
+    vertical-align: middle;
+    display: inline-block;
+    background:url(../img/zc_clicon.png) -413px -14px no-repeat;
+}
+.left-price{
+    border-bottom: 1px solid #e7e8e9;
+    color: #93939e;
+    background-color: #fff;
+}
+.pri-range{
+    width: 240px;
+    margin: 5px auto 0;
+    overflow: hidden;
+    cursor: pointer;
+    list-style: none;
+    padding: 0;
+}
+.pri-range-ty{
+    display: inline-block;
+    float: left;
+    margin-right: 2px;
+}
+.pri-range-a{
+    display: inline-block;
+    float: left;
+    outline: 0;
+    text-decoration: none;
+}
+.w40{
+    background-color: #fabe00;
+    display: inline-block;
+    height: 5px;
+    margin: 5px 0;
+    width: 40px;
+}
+.w39{
+    background-color: #e9ebee;
+    display: inline-block;
+    height: 5px;
+    margin: 5px 0;
+    width: 40px;
+}
+.w38{
+    background-color: #e9ebee;
+    display: inline-block;
+    height: 5px;
+    margin: 5px 0;
+    width: 70px;
+}
+.pri-num{
+    width: 240px;
+    margin: -2px auto 0;
+    padding-bottom: 12px;
+    overflow: hidden;
+    list-style: none;
+    padding-left: 15px;
+
+}
+.w10{
+    color: #fabe00;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+    width: 37px;
+}
+.w11{
+    font-family: "微软雅黑";
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+    width: 35px;
+    margin-left:-5px ;
+}
+.w12{
+    font-family: "微软雅黑";
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+    width: 42px;
+    margin-left: 5px;
+}
+.w13{
+    font-family: "微软雅黑";
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+    width: 42px;
+    margin-left: 6px;
+}
+.w14{
+    font-family: "微软雅黑";
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+    width: 42px;
+    margin-left:5px;
+}
+.left-brand{
+    border-bottom: 1px solid #e7e8e9;
+    color: #93939e;
+    background-color: #fff;
+}
+.car-brand{
+    overflow: hidden;
+    padding: 0px 14px 12px;
+    list-style: none;
+}
+.car-brand-i{
+    float: left;
+    width: 60px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.w15{
+    color: #fabe00;
+    text-decoration: none;
+}
+.w16{
+    color: #93939e;
+    text-decoration: none;
+}
+/*租车列表左半边left end*/
+/*right*/
+.zc-listmain-right{
+    margin-top:5px;
+    width: 922px;
+    color: #93939e;
+    float: right;
+}
+.zc-right-box{
+    min-height: 1270px;
+    background-color: #fff;
+}
+.right_tab{
+    display: block;
+    width: 100%;
+    list-style: none;
+    height: 47px;
+    padding: 0px;
+    line-height: 48px;
+    text-align: center;
+    background-color: #f8f8fa;
+    border-bottom: 1px solid #e9ebee;
+}
+
+.w17{
+    font-family: "微软雅黑";
+    background: #fff;
+    height: 46px;
+    line-height: 44px;
+    border-top: 2px solid #fabe00;
+    float: left;
+    border-right: 1px solid #e9ebee;
+    color: #2f2f39;
+    font-size: 16px;
+    padding-right: 0;
+    width: 120px;
+}
+.w18{
+    color: #2f2f39;
+    display: block;
+    text-decoration: none;
+}
+.w19{
+    height: 47px;
+    width: 142px;
+    float: left;
+    border-right: 1px solid #e9ebee;
+    color: #2f2f39;
+    font-size: 16px;
+    padding-right: 0;
+}
+.w20{
+    font-family: "微软雅黑";
+    position: relative;
+    color: #60606c;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+}
+.right-clist-box{
+    background-color: #fff;
+}
+.right-list-table{
+    width: 922px;
+    border-collapse: collapse;
+}
+.right-list-table tr{
+    display: table-row;
+}
+.right-list-table td{
+    display: table-cell;
+    vertical-align: inherit;
+}
+.pic{
+    margin: 0;
+    padding: 0;
+    padding: 25px 0 25px 30px;
+    width: 230px;
+    position: relative;
+    border-bottom: 1px solid #e4e6e9;
+}.pic img{
+     width: 230px;
+     height: 130px;
+ }
+.info{
+    width: 302px;
+    padding: 20px 0 20px 20px;
+    border-bottom: 1px solid #e4e6e9;
+}
+.info-name{
+    padding: 0;
+    margin: 0;
+    display: block;
+    font-size: 18px;
+    color: #60606c;
+    line-height: 26px;
+}
+.info-oth{
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+}
+.alltips{
+    margin-top: 12px;
+    font-size: 0;
+}
+.bh-rm{
+    border: 1px solid #ff8650;
+    color: #ff8650;
+    width: 48px;
+    height: 18px;
+    font-style: normal;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 5px;
+    line-height: 20px;
+}
+.bh-xin{
+    border: 1px solid #2b99ff;
+    color: #2b99ff;
+    width: 48px;
+    height: 18px;
+    font-style: normal;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 5px;
+    line-height: 20px;
+}
+.ord{
+    width: 320px;
+    padding: 30px 20px 30px 0;
+    border-bottom: 1px solid #e4e6e9;
+}
+.order-box{
+    width: 320px;
+    height: 50px;
+    float: right;
+    margin-bottom: 12px;
+}
+.order-box-left{
+    float: left;
+}
+.car-price{
+    font-family: "微软雅黑";
+    width: 160px;
+    height: 50px;
+    float: left;
+    position: relative;
+    left: 15px;
+}
+.order-price-head{
+    float: left;
+    overflow: hidden;
+}
+.order-rmb{
+    color: #ff8650;
+    font-size: 24px;
+    line-height: 30px;
+    display: inline-block;
+    font-style: normal;
+}
+.order-num{
+    color: #ff8650;
+    font-size: 30px;
+    line-height: 30px;
+    display: inline-block;
+    font-style: normal;
+}
+.order-unit{
+    display: inline-block;
+    font-size: 12px;
+    font-style: normal;
+    margin-top: 12px;
+}
+.order-price-bottom{
+    clear: both;
+    float: left;
+    margin-top: 8px;
+    margin-left: 25PX;
+}
+.order-price-bottom span{
+
+    font-family: "微软雅黑";
+    margin: 4px 0 0;
+    overflow: hidden;
+}
+.order-total{
+    font-style: normal;
+    display: inline-block;
+    line-height: 16px;
+    float: left;
+    font-size: 12px;
+}
+.order-smrmb{
+    font-size: 14px;
+    font-style: normal;
+    text-decoration: line-through;
+    display: inline-block;
+    line-height: 16px;
+    float: left;
+}
+.order-smnum{
+    text-decoration: line-through;
+    font-size: 14px;
+    font-style: normal;
+    display: inline-block;
+    line-height: 16px;
+    float: left;
+}
+.od-but{
+    font-family: "微软雅黑";
+    background-color: #ff8650;
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*right end*/
+.pri-num a{
+    text-decoration: none;
+    color: #93939e;
+}
+.left-cartype-defult a{
+    text-decoration: none;
+    color: #93939e;
+    display: block;
+    line-height: 24px;
+    font-size: 12px;
+    text-align: center;
+}

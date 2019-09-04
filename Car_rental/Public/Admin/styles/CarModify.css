@@ -1,0 +1,27 @@
+.addCar-hidden{
+	position: absolute;
+    float: right;
+    margin-left: 150px;
+	margin-top: 5px;
+
+}
+.addCar-hidden span{
+	color: #555;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-indent: 16px;
+    font-size: 15px;
+    line-height: 32px;
+    font-family: arial;
+    width: 100%;
+    float: left;
+    height: 30px;
+    border-bottom: 1px solid rgb(97, 161, 223);
+}
+.addCar-hidden  img{
+	float: left;
+	width: 250px;
+	height: 150px;
+	margin-left: 350px;
+	margin-top: 20px;
+}

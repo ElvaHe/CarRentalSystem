@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/CarAdd.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/CarModify.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderManage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderModify.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/addCar.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/CarModify.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+						<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+						<li><a href="#"><i>修改用户信息</i></a></li>
+						<li><a href="#"><i>邮件集体分发</i></a></li>
+						
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+						<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+						<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+						<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+						<li><a href="/Car/CarModify"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="javascript:void(0);"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper" style="background: #fff">
+		    	<div class="page-wrapper-main" style="height: auto">
+		    		<h1>修改车辆信息</h1>
+					   <form method="post" action="CarModify_action"  id="CarModify_action" enctype="multipart/form-data">
+							<input type="text" style="visibility: hidden;position: absolute" value="{$Car['car_id']}" name="Car_Id">
+						    <div class="addCar-showIfo">
+								<ul>
+									<li class="addCar-One" style="height: 200px;visibility: hidden;" >
+										<span class="addCar-head">图片信息</span>
+										<div class="addCar-Pic">
+											 <span class="yulan">预览图片效果:</span>
+											 <div class="addCar-show" id="preview">
+												<!--<img src="images/klz.jpg"/>-->
+											 </div>
+											 
+										</div>
+									</li>
+									<li class="addCar-hidden" style="height: 200px;width: 76%;">
+										<span class="addCar-head">图片信息</span>
+										<img src="{$Car['car_url']}"/>
+											
+									</li>
+									<li class="addCar-Two" style="height: 200px; margin-top: 30px;">
+										<span class="addCar-head">基本信息</span>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="pp">&nbsp;</b>
+												 品  &nbsp;&nbsp;牌：
+												<input value="{$Car['car_brand']}" name="Car_Brand" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="cx">&nbsp;</b>
+												 车  &nbsp;&nbsp;系：
+												<input value="{$Car['car_type']}"  name="Car_Type" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="ndk">&nbsp;</b>
+												 年代款：
+												<input value="{$Car['car_year']}"  name="Car_Year"  type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="pzk">&nbsp;</b>
+												 配置款：
+												<input value="{$Car['car_configuration']}"  name="Car_Configuration" type="text"/>
+											</div>
+										</div>
+									</li>
+									<li class="addCar-Three" style="height: 620px; margin-top: 20px; float: left;">
+										<span class="addCar-head">配置信息</span>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="zw">&nbsp;</b>
+												 座位数：
+												<input value="{$Car['car_seatnum']}"  name="Car_SeatNum" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="cm">&nbsp;</b>
+												 车门数：
+												<input value="{$Car['car_door']}"  name="Car_Door" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="rll">&nbsp;</b>
+												 燃&nbsp;&nbsp;&nbsp;料：
+												<input value="{$Car['car_fuel']}"  name="Car_Fuel" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="bsx">&nbsp;</b>
+												 变速箱：
+												<input value="{$Car['car_gearcase']}"  name="Car_Gearcase" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="pl">&nbsp;</b>
+												 排&nbsp;&nbsp;量：
+												<input value="{$Car['car_pailiang']}"  name="Car_pailiang" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="ryh">&nbsp;</b>
+												 燃油号：
+												<input value="{$Car['car_fuelnum']}"  name="Car_FuelNum" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="qd">&nbsp;</b>
+												驱&nbsp;&nbsp;动：
+												<input value="{$Car['car_drive']}"  name="Car_Drive" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="fdj">&nbsp;</b>
+												 发动机进气形式：
+												<input  value="{$Car['car_engine']}"  name="Car_Engine" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="tc">&nbsp;</b>
+												天&nbsp;&nbsp;窗：
+												<input value="{$Car['car_skylight']}"  name="Car_Skylight" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="yxrl">&nbsp;</b>
+												 邮箱容量：
+												<input  value="{$Car['car_tank']}"  name="Car_Tank" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="yx">&nbsp;</b>
+												音&nbsp;&nbsp;箱：
+												<input  value="{$Car['car_voicebox']}"  name="Car_Voicebox" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="zy">&nbsp;</b>
+												 座&nbsp;&nbsp;椅：
+												<input  value="{$Car['car_seatsort']}"  name="Car_SeatSort" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="dxld">&nbsp;</b>
+												倒车雷达：
+												<input value="{$Car['car_reversing']}"  name="Car_Reversing" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="qn">&nbsp;</b>
+												 气&nbsp;&nbsp;囊：
+												<input value="{$Car['car_gasbag']}"  name="Car_Gasbag" type="text"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="dvd">&nbsp;</b>
+												DVD/CD：
+												<input  value="{$Car['car_music']}"  name="Car_Music" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="gps">&nbsp;</b>
+												 GPS导航：
+												<input value="{$Car['car_gps']}"  type="text" name="Car_GPS"/>
+											</div>
+										</div>
+									</li>
+									<li class="addCar-Four" style="height: 200px; background: #fff; margin-top: 20px; float: left;">
+										<span class="addCar-head">价格信息</span>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="zw">&nbsp;</b>
+												 促销价格：
+												<input value="{$Car['car_price']}"  type="text" name="Car_Price"/>
+											</div>
+											<div class="addCar-norOne">
+												<b class="zw">&nbsp;</b>
+												 页面标题：
+												<input value="{$Car['car_detailna']}"  type="text" name="Car_DetailNa"/>
+											</div>
+										</div>
+										<div class="addCar-normal">
+											<div class="addCar-norOne">
+												<b class="pp">&nbsp;</b>
+												车辆原价：
+												<input  value="{$Car['car_oripri']}"  name="Car_OriPri" type="text"/>
+											</div>
+											<div class="addCar-norOne">
+												<b   class="pp">&nbsp;</b>
+												车辆名称：
+												<input value="{$Car['car_name']}" type="text" name="Car_Name"/>
+											</div>
+										</div>
+
+									</li>
+
+								</ul>
+							</div>
+							<div class="addcCargraybutbox" >
+								<a href="javascript:void(0);" style="margin-left: 150px;" id="returnbut">返回主界面</a>
+								<a href="/Car/CarManage?Car_Id={$Car['car_id']}" style="margin-left: 150px;" id="managebut">管理车辆</a>
+								<a href="javascript:void(0);" style="margin-left: 150px;" id="modifybut">修改信息</a>
+								<a href="javascript:void(0);" style="position: absolute; visibility: hidden; margin-left: 750px;" id="submitbut">保存信息</a>
+							</div>
+		    	       </form>
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderPage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/Emialsend.css"/>
+	    <script src="http://admin.car_rental.com/js/Emailsend.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+						<li><a href="#"><i>用户信息查看</i></a></li>
+						<li><a href="#"><i>修改用户信息</i></a></li>
+						<li><a href="#"><i>邮件集体分发</i></a></li>
+						
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+						<li><a href="#"><i>订单信息查询</i></a></li>
+						<li><a href="#"><i>进行订单操作</i></a></li>
+						<li><a href="#"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+						<li><a href="#"><i>新增车辆信息</i></a></li>
+						<li><a href="#"><i>查询车辆信息</i></a></li>
+						<li><a href="#"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="#"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper">
+		    	<div class="page-wrapper-main">
+		    		<h1>邮件集体分发</h1>
+		    		<div class="show-emailIfo">
+		    			<div class="serach-user">
+		    				<div class="seacrh-line-inner">
+											<span>Search:</span>
+											<select class="chooseSel" name="method">
+												<option selected="selected">请选择您要查询的方式</option>
+												<option value="MemberID">MemberID</option>
+												<option >MemberUserName</option>
+												<option >MemberNickName</option>
+											</select>
+											<input type="text" name="mem_search" class="searchInput" id="searchInput"/>
+											<input type="button" value="查询" class="submitInput" id="submitBut" onclick="searchBut()"/>
+
+    	    				</div>
+		    			</div>
+		    		    <div class="email-nav">
+	                            <span class="e1" >勾选是否发生送</span>
+	                            <span class="e2" >收件人姓名</span>
+	                            <span class="e3" >收件人邮箱</span>
+	                            <span class="e4" >收件人昵称</span>
+	                            <span class="e5" >查看个人信息</span>
+		    		    </div>
+						<form method="post" id="Emailsend_form" action="Emailsend_action">
+							<div class="gundong">
+
+									<table class="zc-email-table" cellpadding="0" cellspacing="0" border="0">
+										<tbody>
+											<foreach name="Mem" item="v">
+												<tr class="Email-tr">
+													<td style="width: 180px;border-left: none;">
+														<input type="checkbox" name="checkbox[]" value="{$v.mem_email}" class="checkbox" />
+													</td>
+													<td style="width: 200px; ">{$v.mem_name}</td>
+													<td style="width: 250px;">{$v.mem_email}</td>
+													<td style="width: 190px;">{$v.mem_nickname}</td>
+													<td style="width: 170px;border-right: none;" class="chakan-td">
+														<a href="###" class="Ifo-But">点击查看</a>
+													</td>
+												</tr>
+											</foreach>
+												<tr class="Email-none" style="display:none">
+													<td style="width: 180px;border-left: none;">
+														<input type="checkbox" name="checkbox[]"  class="checkbox" />
+													</td>
+													<td id="email-none-one" style="width: 200px; "></td>
+													<td id="email-none-two" style="width: 250px;"></td>
+													<td id="email-none-three" style="width: 190px;"></td>
+													<td style="width: 170px;border-right: none;" class="chakan-td">
+														<a href="###" class="Ifo-But">点击查看</a>
+													</td>
+												</tr>
+										</tbody>
+									</table>
+
+							</div>
+							<div class="email-title" >
+		    	        	<div class="email-zhuti">
+		    	        		<span>邮件标题：</span>
+		    	        		<input type="text" name="email_title" placeholder="请输入您邮件的标题" />
+		    	        	</div>
+		    	        	<div class="email-xiangxi">
+		    	        		<span class="span-1">发&nbsp;件&nbsp;人&nbsp;：</span>
+		    	        		<span class="span-2">神州租车官方团队</span>
+		    	        		<span class="span-3">发件时间：</span>
+		    	        		<span class="span-2">{$Time['email-time']}</span>
+		    	        	</div>
+		    	        </div>
+
+							<div class="emial-cont">
+		    		    	<div class="emial-zhengwen">
+		    		    		<span class="zhengwen-title">
+		    		    			正&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文&nbsp; :
+		    		    		</span>
+		    		    	    <textarea name="email_content" class="zhengwen-textarea"></textarea>
+		    		    	</div>
+		    		    </div>
+						</form>
+						<div class="emial-but">
+		    		    	<a id="sendemailBut" href="javascript:void(0)">确认发送</a>
+		    		    </div>
+		    		</div>
+		    	 	
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>

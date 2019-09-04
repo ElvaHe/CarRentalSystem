@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://www.car_rental.com/scripts/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://www.car_rental.com/styles/headTop.css"/>
+		<link rel="stylesheet" type="text/css" href="http://www.car_rental.com/styles/HomePage.css"/>
+		<script src="http://www.car_rental.com/scripts/autoChangeImages.js" type="text/javascript" charset="utf-8"></script>
+		<title>神舟租车--厦门</title>
+	</head>
+	<body onLoad = "autoChangeImage();">
+	<!--head start-->
+	<div id="head_bd">
+		<div class="zc-head-main">
+			<a href="###" class="zc_logo" alt="神州租车"></a>
+			<ul class="zc-head-menu">
+				<li><a href="/HomePage/HomePage">首页</a></li>
+				<li><a href="/IfoPage/IfoPage#orderAll">我的订单</a></li>
+				<li><a href="/IfoPage/IfoPage#orderMes">基本信息</a></li>
+				<li><a href="###">门店</a></li>
+				<li><a href="/Login/Login">注销</a></li>
+			</ul>
+			<div class="zc-head-index">
+				<div class="zc-head-ifo">
+					<h1 id="topLoginName">
+						你好，Hucker&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="/IfoPage/IfoPage#orderAll">我的神州</a>
+					</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--head end-->
+	<form action="/Carlist/carlist_action" method="post">
+		<div class="home-order-box">
+			<div class="home-order-box-head">
+				<div class="home-order-head-main">
+					<label>上门取送 <==>到店取还</label>
+				</div>
+				<div class="home-order-lineOne">
+					<label class="c-car">取车</label>
+					<input type="text" value="厦门" class="zc-form-input" readonly="readonly"/>
+					<input type="text" name="fetchPlace" placeholder="请选择您取车地址" class="zc-form-input2" id="fetchplace" onclick="placefetch()" />
+				</div>
+				<div class="home-order-lineTwo">
+					<label class="c-car">还车</label>
+					<input type="text" value="厦门" class="zc-form-input" readonly="readonly"/>
+					<input type="text" name="backPlace" value="请选择您还车地址" onclick="placeback()" id="backplace" class="zc-form-input2" readonly="readonly"/>
+				</div>
+				<div class="blank"></div>
+				<div class="home-order-lineThree">
+					<label>租期</label>
+					<table class="home-order-fetch" >
+						<tr><td>
+							<input type="date"  name="fetchTime" id="fetchTime" class="zc-form-input3"  min="2016-11-17" />
+						</td></tr>
+						<tr><td>
+							<input type="text"  onclick="timefetch()" name="fetchHour" id="fetchHour" class="zc-form-input3" />
+						</td></tr>
+					</table>
+					<div class="home-order-fetch-pi">
+						<span></span>
+					</div>
+					<table class="home-order-back" >
+						<tr><td>
+							<input type="date"   name="backTime" id="backTime" class="zc-form-input3" />
+						</td></tr>
+						<tr><td>
+							<input type="text"  onclick="timeback()" name="backHour" id="backHour" class="zc-form-input3" />
+						</td></tr>
+					</table>
+				</div>
+				<div id="home-time-hidden-fetch">
+					<ul>
+						<li  onclick="ToInputFetch('09:00')">09:00</li>
+						<li  onclick="ToInputFetch('10:00')">10:00</li>
+						<li  onclick="ToInputFetch('11:00')">11:00</li>
+						<li  onclick="ToInputFetch('12:00')">12:00</li>
+						<li  onclick="ToInputFetch('13:00')">13:00</li>
+						<li  onclick="ToInputFetch('14:00')">14:00</li>
+						<li  onclick="ToInputFetch('15:00')">15:00</li>
+						<li  onclick="ToInputFetch('16:00')">16:00</li>
+						<li  onclick="ToInputFetch('17:00')">17:00</li>
+						<li  onclick="ToInputFetch('18:00')">18:00</li>
+						<li  onclick="ToInputFetch('19:00')">19:00</li>
+						<li  onclick="ToInputFetch('20:00')">20:00</li>
+					</ul>
+				</div>
+				<div id="home-time-hidden-back">
+					<ul>
+						<li  onclick="ToInputBack('09:00')">09:00</li>
+						<li  onclick="ToInputBack('10:00')">10:00</li>
+						<li  onclick="ToInputBack('11:00')">11:00</li>
+						<li  onclick="ToInputBack('12:00')">12:00</li>
+						<li  onclick="ToInputBack('13:00')">13:00</li>
+						<li  onclick="ToInputBack('14:00')">14:00</li>
+						<li  onclick="ToInputBack('15:00')">15:00</li>
+						<li  onclick="ToInputBack('16:00')">16:00</li>
+						<li  onclick="ToInputBack('17:00')">17:00</li>
+						<li  onclick="ToInputBack('18:00')">18:00</li>
+						<li  onclick="ToInputBack('19:00')">19:00</li>
+						<li  onclick="ToInputBack('20:00')">20:00</li>
+					</ul>
+				</div>
+				<div class="home-order-lineFour">
+					<input type="submit" class="home-next-go" value="立即选车"/>
+				</div>
+			</div>
+		</div>
+		<div class="home-place-box" id="placefetchlist">
+			<div class="home-place-title">
+				<span>思明区</span>
+			</div>
+			<div class="home-place-address">
+				<ul>
+					<li onclick="placefetchli('厦门宾馆（公交站）')">厦门宾馆（公交站）</li>
+					<li onclick="placefetchli('厦禾路')">厦禾路</li>
+					<li onclick="placefetchli('莲前西路')">莲前西路</li>
+					<li onclick="placefetchli('蔡塘站')">蔡塘站</li>
+					<li onclick="placefetchli('思北站')">思北站</li>
+					<li onclick="placefetchli('华侨大学站')">华侨大学站</li>
+					<li onclick="placefetchli('中科院站')">中科院站</li>
+					<li onclick="placefetchli('诚毅学院站')">诚毅学院站</li>
+					<li onclick="placefetchli('金山站')">金山站</li>
+					<li onclick="placefetchli('卧龙晓城站')">卧龙晓城站</li>
+					<li onclick="placefetchli('斗西路站')">斗西路站</li>
+					<li onclick="placefetchli('第一码头站')">第一码头站</li>
+					<li onclick="placefetchli('双十中学站')">双十中学站</li>
+					<li onclick="placefetchli('集美大桥站')">集美大桥站</li>
+				</ul>
+			</div>
+			<div class="home-place-title">
+				<span>湖里区</span>
+			</div>
+			<div class="home-place-address">
+				<ul>
+					<li onclick="placefetchli('厦门宾馆（公交站）')">厦门宾馆（公交站）</li>
+					<li onclick="placefetchli('厦禾路')">厦禾路</li>
+					<li onclick="placefetchli('莲前西路')">莲前西路</li>
+					<li onclick="placefetchli('蔡塘站')">蔡塘站</li>
+					<li onclick="placefetchli('思北站')">思北站</li>
+					<li onclick="placefetchli('华侨大学站')">华侨大学站</li>
+					<li onclick="placefetchli('中科院站')">中科院站</li>
+					<li onclick="placefetchli('诚毅学院站')">诚毅学院站</li>
+					<li onclick="placefetchli('金山站')">金山站</li>
+					<li onclick="placefetchli('卧龙晓城站')">卧龙晓城站</li>
+					<li onclick="placefetchli('斗西路站')">斗西路站</li>
+					<li onclick="placefetchli('第一码头站')">第一码头站</li>
+					<li onclick="placefetchli('双十中学站')">双十中学站</li>
+					<li onclick="placefetchli('集美大桥站')">集美大桥站</li>
+				</ul>
+			</div>
+		</div>
+	</form>
+	<!-- middle END-->
+	<div class="home-loop-main">
+		<div id = "contain">  <!--图片展示内容框-->
+			<div id = "imgIndex" class = "imageShow">  <!--默认显示图片框--></div>
+			<div id = "posi"><!--按钮位置-->
+				<input id = "radio1" class = "radio" name = "lit" type = "radio" value = "1" onClick="changeImage(1)" />
+				<input id = "radio2" class = "radio" name = "lit" type = "radio" value = "1" onClick="changeImage(2)" />
+				<input id = "radio3" class = "radio" name = "lit" type = "radio" value = "1" onClick="changeImage(3)" />
+				<input id = "radio4" class = "radio" name = "lit" type = "radio" value = "1" onClick="changeImage(4)" />
+			</div>
+		</div>
+	</div>
+	<!--LOOP END-->
+	<div class="zc_b_bd">
+		<div class="zc_brand">
+			<div class="zc_main2">
+				<ul>
+					<li>
+						<i class="zc-yecx"></i>
+						<p><b>100+</b>车型</p>
+					</li>
+					<li>
+						<i class="zc-yewd"></i>
+						<p><b>100+</b>网点</p>
+					</li>
+					<li>
+						<i class="zc-yecxn"></i>
+						<p><b>100%</b>车险</p>
+					</li>
+					<li style="border-right: 1px solid #e9ebee;">
+						<i class="zc-yelc"></i>
+						<p>无限里程</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--pic end-->
+
+	<!--foot-->
+	<div class="zc-footmenu">
+		<div class="zc_main2">
+			<dl class="wyd">
+				<dt>租车预定说明</dt>
+				<dd>
+					<a href="###">服务时间</a>
+					<a href="###">服务地点</a>
+					<a href="###">租车资格</a>
+					<a href="###">取还车说明</a>
+				</dd>
+			</dl>
+			<dl class="why">
+				<dt>会员管理</dt>
+				<dd>
+					<a href="###">会员章程</a>
+				</dd>
+			</dl>
+			<dl class="wsj">
+				<dt>紧急事务处理</dt>
+				<dd>
+					<a target="_blank" href="###">保险责任</a>
+					<a target="_blank" href="###">理赔说明</a>
+					<a target="_blank" href="###">事故处理</a>
+					<a target="_blank" href="###" style="clear:both;">救援及备用车</a>
+				</dd>
+			</dl>
+			<dl class="wfy">
+				<dt>租车费用及结算</dt>
+				<dd>
+					<a target="_blank" href="###">价格说明</a>
+					<a target="_blank" href="###">结算流程</a>
+					<a target="_blank" href="###">储值卡</a>
+				</dd>
+			</dl>
+			<dl class="wbz">
+				<dt>帮助中心</dt>
+				<dd>
+					<a target="_blank" href="http://help.zuche.com/xssl/">常见问题</a>
+					<a target="_blank" href="http://help.zuche.com/cjwt/">新手上路</a>
+					<a target="_blank" href="http://help.zuche.com/fwgz/">服务规则 </a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<!--foot end-->
+	<div class="zc-footer">
+		<div class="zc_main">
+			<div class="ainfor">
+				<a title="关于我们" href="http://huodong.zuche.com/gywm/">关于我们</a>
+				<a title="投资者关系" target="_blank" href="http://ir.zuche.com">投资者关系</a>
+				<a target="_parent" title="新闻中心" href="http://news.zuche.com/">新闻中心</a>
+				<a title="加盟合作" target="_blank" href="http://jiameng.zuche.com">加盟合作</a>
+				<a title="隐私保护" target="_parent" href="http://huodong.zuche.com/ysbh/">隐私保护</a>
+				<a title="网站导航" target="_parent" href="http://help.zuche.com/sitemap/">网站导航</a>
+				<a title="联系我们" target="_parent" href="http://huodong.zuche.com/lxwm/">联系我们</a>
+				<a title="招贤纳士" target="_blank" href="http://hr.zuche.com/">招贤纳士</a>
+				<a target="_blank" href="http://en.zuche.com" class="eng_wz">English<i class="eng_icon"></i></a>
+			</div>
+
+			<div class="zc-copyright">
+				<p class="fl">Copyright©2008-2016 www.zuche.com All Rights Reserved.　神州租车官网 京ICP备10005002号   京公网安备号 11010502026705</p>
+				<p class="fr">如果您对神州租车网站有任何意见，欢迎发送邮件到 web@zuche.com</p>
+				<p class="pt10">
+					<a target="_blank" tabindex="-1" id="urlknet" class="sz_k"></a>
+					<a target="_blank" id="___szfw_logo___"  title="诚信网站" class="sz_c"></a>
+				</p>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

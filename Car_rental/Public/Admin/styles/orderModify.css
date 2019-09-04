@@ -1,0 +1,75 @@
+.hourModi{
+	float: left;
+	margin-top: 12px;
+	margin-left: 10px;
+	 background-color: #FFFFFF;
+	 cursor: pointer;
+	 width: 120px;
+	 font-size: 14px;
+	 text-align: center;
+     padding: 9px 10px;
+     border-color: #e9ebee;
+}
+.timeModi{
+	 float: left;
+	 margin-top: 12px;
+	 margin-left: 10px;
+	 background-color: #FFFFFF;
+	 cursor: pointer;
+	 padding: 7px 10px;
+     border:1px solid  #e9ebee;
+	 width: 130px;
+	 font-size: 14px;
+	 text-align: center;
+}
+.zc_giveback_iMo{
+	margin-left: 38px;
+	float: left;
+	margin-top: 23px;
+    display: block;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon_2.png) -170px -262px no-repeat;
+}
+.fetchPlaceModi{
+	float: left;
+	margin-top: 12px;
+	margin-left: 10px;
+	 background-color: #FFFFFF;
+	 cursor: pointer;
+	 width: 283px;
+	 font-size: 14px;
+	 text-align: center;
+     padding: 9px 10px;
+     border-color: #e9ebee;
+}
+.orderModgraybutbox{
+	float: left;
+	width: 100%;
+	padding: 20px 0;
+    background-color: #f8f8fa;
+}
+.orderModgraybutbox a{
+	float: left;
+	font-family: "微软雅黑";
+    padding: 0 10px;
+    display:block;
+    text-decoration: none;
+    width: 130px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 2px;
+    height: 42px;
+    line-height: 42px;
+    background-color: #f3b900;
+    cursor: pointer;
+    border: 0;
+    margin-left: 230px;
+}
+/*---*/
+.addcCargraybutbox{
+	
+}

@@ -1,0 +1,332 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background: #EDEDED;
+}
+
+ #wrapper {
+ 	width: 92.5%;
+}
+.top-navbar{
+	border-radius: 0px;
+    background: #323232; 
+    position: fixed;
+    width: 100%;
+    z-index: 300;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    min-height:60px;
+}
+.navbar-header{
+	float: left;
+	width: 260px;
+	height: 60px;
+	
+}
+.nav-brand{
+	text-decoration: none;
+	display: block;
+	color: #FFF;
+	background: #F09B22;  
+	width: 260px;
+    text-indent: 15px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 60px;
+    
+}
+.nav-brand:hover{
+    background-color: #FFB53E;
+}
+.navbar-right{
+	float: right!important;
+    margin-right: -15px;
+    padding-left: 0;
+    margin-top: 0;
+    display: block;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbar-right li{
+	position: relative;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+.toggle{
+	cursor: auto;
+	position: relative;
+    display: block;
+    padding: 20px;
+    color: #FFFFFF;
+    margin-right: 20px;
+    text-decoration: none;
+}
+.fa-suer{
+	display: block;
+	width: 15px;
+	height: 15px;
+}
+
+.page-wrapper{
+	padding-left: 100px;
+	float: left;
+	width: 100%;
+	min-height: 1200px;
+    background: #EDEDED;
+}
+/*用户信息查看的CSS样式*/
+.page-wrapper-main{
+	min-height: 1200px;
+	margin-left: 160px;
+	margin-top: 60px;
+}
+.Ifo-sbm-but{
+	font-family: "微软雅黑";
+    padding: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    min-width: 130px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 2px;
+    height: 42px;
+    line-height: 42px;
+    background-color: #f3b900;
+    cursor: pointer;
+    border: 0;
+    margin-left: 480px;
+}
+.graybutbox{
+	float: left;
+	width: 100%;
+	padding: 20px 0;
+    background-color: #f8f8fa;
+}
+.page-wrapper h1{
+	font-family: "微软雅黑";
+    padding-bottom: 9px;
+    margin: 0;
+    text-align: left;
+    padding: 22px 22px 32px 20px;
+    color: #323232;
+    font-size: 25px;
+}
+.show-MemIfo{
+	height: 220px;
+	padding: 5px 10px 12px 20px;
+    border-radius: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    background: #fff;
+}
+.show-MemIfo ul{
+	display: block;
+	margin-top: 35px;
+    border-top: 1px solid #e9ebee;
+    list-style: none;
+    padding: 0;
+}
+.show-MemIfo li{
+    height: 59px;
+    border-bottom: 1px solid #e9ebee;
+}
+.show-Ifoin1{
+	font-family: "微软雅黑";
+    line-height: 59px;
+    width: 100px;
+    margin-left: 30px;
+    padding-left: 15px;
+    font-size: 15px;
+    color: #60606c;
+    float: left;
+    cursor: default;
+}
+.show-Ifosp{
+	font-family: "微软雅黑";
+    line-height: 59px;
+    width: 260px;
+    padding-left: 5px;
+    font-size: 14px;
+    color: #60606c;
+    float: left;
+    cursor: default;
+}
+.show-Ifoinput{
+	cursor: pointer;
+    width: 250px;
+    padding: 9px 10px;
+    border-color: #e9ebee;
+    border-style: solid;
+    border-width: 1px;
+    height: 18px;
+    color: #93939e;
+    vertical-align: middle;
+    background-color: #fff;
+}
+.show-Ifoinput:hover{
+	border-color:#F09B22 ;
+}
+.show-Ifoin2{
+	font-family: "微软雅黑";
+    line-height: 59px;
+    width: 100px;
+    margin-left: 200px;
+    padding-left: 15px;
+    font-size: 15px;
+    color: #60606c;
+    float: left;
+    cursor: default;
+}
+.search-table-box{
+	float: left;
+	margin-top: 50px;
+	min-height: 610px;
+}
+.search-table-main{
+	background: #FFF;
+	width: 90%;
+    margin-left: 40px;
+}
+.search-table{
+    background: #FFFFFF;
+	width: 100%;
+	min-height: 610px;
+	position: relative;
+    padding: 20px 15px 20px 20px;
+}
+.panel-heading{
+	height: 43px;
+	float: left;
+    color: #555;
+    width: 100%;
+    border-color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: none;
+}
+.seacrh-line{
+	border-color: #FFF;
+	width: 100%;
+	float: left;
+	height: 32px;
+}
+.seacrh-line-inner{
+	font-size: 15px;
+	float: right;
+}
+
+.table-mian{
+	margin-top: 15px;
+	float: left;
+	height: auto;
+}
+.table-sorting{
+	font-family: arial;
+	color: #555;
+	height: 36px;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-weight: bold;
+    font-size: 14px;
+}
+.gradeAodd{
+	background-color: #f9f9f9;
+}
+.table-td{
+    height: 49px;
+	padding: 0 10px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+}
+.action{
+	text-align: center;
+}
+.action a{
+	margin-right:10px ;
+	color: #6B7179;
+	font-family: "微软雅黑";
+	font-size:14px;
+	cursor: pointer;
+}
+.action a:hover{
+	color: #F09B22;
+	text-decoration: underline;
+}
+.gradeAeven:hover{
+	background-color: #f9f9f9;
+}
+.fenye-line{
+	margin: 35px 0 0 0;
+	width: 100%;
+	float: left;
+	height: 34px;
+}
+.fenye-main{
+	float: right;
+	height: 34px;
+	border-radius:10px ;
+    font-size: 14px;
+}
+.fenye-main a{
+	border-radius:5px ;
+	display: block;
+	position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.fenye-main a:hover{
+	background: #337ab7;
+	color: #000000;
+}
+
+/*查询用户样式*/
+.searchInput{
+    margin-left: 10px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    display: inline-block;
+    width: 157px;
+    height: 30px;
+    border-radius: 5px;
+}
+.submitInput{
+    font-family: arial;
+    margin-left: 10px;
+    color: #555;
+    cursor: pointer;
+    background-color: #ddd;
+    background-image: none;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}
+.submitInput:hover{
+    width: 82px;
+    height: 32px;
+}
+.chooseSel{
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    display: inline-block;
+    width: 157px;
+    height: 30px;
+    border-radius: 5px;
+}

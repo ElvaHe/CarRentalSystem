@@ -1,0 +1,720 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	color: #333;
+    background-color: #f2f3f5;
+}
+
+.page_title{
+	font-weight: bold;
+	font-size: 24px;
+    color: #eeb81a;
+    position: absolute;
+    top: 17px;
+    left: 215px;
+    z-index: 12;
+    line-height: 28px;
+}
+#head_bd{
+	position: relative;
+	width: 100%;
+    height: 58px;
+    border-top: 2px solid #eeb81a;
+    background-color: #1b2b3b;
+}
+.zc-head-main{
+	height: 58px;
+    z-index: 11;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.zc_logo{
+	display: block;
+    width: 211px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 58px;
+    background: url(../img/logo.png) no-repeat;
+    z-index: 10;
+    cursor: pointer;
+    color: #6ab0ff;
+    text-decoration: none;
+    float: left;
+}
+.zc-head-menu{
+	float: left;
+	overflow: hidden;
+	margin-left: 225px;
+	list-style: none;
+	padding: 0;
+}
+.zc-head-menu li{
+	float: left;
+}
+.zc-head-menu li a{
+	font-family: "microsoft yahei";
+	display: block;
+    padding: 0 19px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    cursor: auto;
+}
+.zc-head-menu a:hover{
+	 color: #fabe00;
+}
+.zc-head-index{
+	position: absolute;
+    top: 0;
+    width: 230px;
+    right: 152px;
+    text-align: center;
+    color: #fabe00;
+}
+.zc-head-ifo{
+	padding-top: 13px;
+	font-size: 14px;
+}
+#topLoginName{
+	width: 300px;
+    text-align: right;
+    font-size: 14px;
+    font-family: 'microsoft yahei',"黑体";
+    font-weight: 400;
+    float: left;
+    line-height: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #c8c8ce;
+}
+#topLoginName a{
+	text-decoration: underline;
+    color: #fabe00;
+}
+#topLoginName a:hover{
+	text-decoration: underline;
+	color: #ff8650;
+}
+/**my head start**/
+.zc-myhead{
+	
+	min-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 5px rgba(228,230,233,1);
+}
+.zc-myhead-main{
+	width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+.myhead-weather{
+	width: 170px;
+    padding-left: 10px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: -720px;
+    border-right: 1px solid #e5e5e5;
+    float: left;
+}
+.myhead-weather span{
+	display: block;
+	margin: 0;
+}
+.sssd{
+	padding: 0;
+	margin: 0;
+	display: block;
+    width: 135px;
+    height: 30px;
+    background: url(../img/icon_2.png) no-repeat -106px -161px;
+}
+.weatherIfo{
+	overflow: hidden;
+	
+}
+.myhead-myIfo{
+	width: 295px;
+    position: relative;
+    padding-left: 100px;
+    padding-top: 18px;
+    height: 84px;
+    margin-left:-480px;
+    float: left;
+}
+.mm_hpicon{
+	position: absolute;
+    width: 70px;
+    top: 20px;
+    left: 30px;
+}
+.ordinary_m_icon{
+	display: block;
+    padding: 0;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    background: url(../img/icon_2.png) -140px -455px no-repeat;
+}
+.mm_hip{
+	margin-left: 20px;
+	margin-top: 0px;
+}
+.mm_name{
+	font-family: "microsoft yahei";
+	font-size: 14px;
+    color: #60606c;
+    line-height: 23px;
+}
+.mm_jb{
+	display: inline-block;
+    font-size: 12px;
+    color: #93939e;
+    height: 18px;
+    width: 100px;
+    margin-left: 0px;
+    color: black;
+    text-align: center;
+    background-color: #FFD130;
+    border: 1px solid #EEB819;
+    line-height: 18px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+/**my head end**/
+.clearboth{
+	clear: both;
+}
+/*Ifo main start*/
+.zc-Ifo-box{
+	padding-top: 15px;
+    padding-bottom: 35px;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.zc-Ifo-LeftBox{
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 268px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(228,230,233,1);
+    
+}
+.Ifo-dl{
+    margin: 0;
+    padding: 0;
+	font-family: "微软雅黑";
+    padding-bottom: 20px;
+    display: block;
+}
+.Ifo-dl dt{
+    font-family: "微软雅黑";
+	padding-left: 14px;
+    border-bottom: 1px solid #e9ebee;
+    border-top: 1px solid #e9ebee;
+    margin-top: -1px;
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #60606c;
+}
+.Ifo-dl  dd{
+	padding: 0;
+	margin: 0;
+    position: relative;
+    display: block;
+}
+.Ifo-dl a{
+	display: block;
+    padding-left: 17px;
+    height: 36px;
+    line-height: 37px;
+    font-size: 12px;
+    color: #93939e;
+    text-decoration: none;
+}
+/*Ifo main end*/
+/*Right Box START*/
+.zc-Ifo-RightBox{
+	height: 513px;
+	width: 922px;
+    float: right;
+}
+.zc-order-alllist{
+	height: 472px;
+	padding: 20px 30px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(228,230,233,1);
+}
+.zc-order-alllist h2{
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+	line-height: 40px;
+    font-size: 18px;
+    color: #60606c;
+    font-weight: 800;
+}
+.zc-order-query{
+    position: absolute;
+    top: 25px;
+    right: 0;
+    min-width: 580px;
+    z-index: 5;
+}
+.zc-order-qBox{
+	padding-right: 30px;
+}
+.query-bt-div{
+	padding-left: 15px;
+    padding-right: 0;
+    height: 30px;
+    line-height: 30px;
+    color: #93939e;
+    float: right;    
+}
+.query-bt{
+	padding: 0 10px;
+    min-width: 86px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #93939e;
+    border: 1px solid #e9ebee;
+    border-radius: 2px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fafbfd;
+    cursor: pointer;
+}
+.quert-finTime{
+	height: 30px;
+    line-height: 30px;
+    color: #93939e;
+    padding-left: 10px;
+    float: right;
+}
+.query-input{
+	float: right;
+    width: 153px;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px 10px;
+    border-color: #e9ebee;
+    border-style: solid;
+    border-width: 1px;
+    outline: 0;
+    color: #93939e;
+    vertical-align: middle;
+    background-color: #fff;
+    background: url(../img/input_calendar.png) no-repeat center right;
+}
+.fr{
+	height: 30px;
+    line-height: 30px;
+    color: #93939e;
+    padding-left: 10px;
+    float: right;
+}
+.quert-bakTime{
+	height: 30px;
+    line-height: 30px;
+    color: #93939e;
+    padding-left: 10px;
+    float: right;
+}
+.h20{
+	height: 20px;
+    line-height: 20px;
+}
+.zc-order-showBox{
+	margin: 0;
+	padding-top: 14px;
+}
+.zc-order-table{
+    width: 862px;
+}
+.zc-order-table thead{
+	background-color: #f8f8fa;
+}
+.zc-order-table thead tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.al{
+	font-family: "微软雅黑";
+	padding-left: 17px;
+	height: 30px;
+    line-height: 30px;
+    background-color: #f8f8fa;
+    font-size: 12px;
+    color: #93939e;
+    font-weight: 400;
+}
+.ac{
+	font-family: "微软雅黑";
+	height: 30px;
+    line-height: 30px;
+    background-color: #f8f8fa;
+    font-size: 12px;
+    color: #93939e;
+    font-weight: 400;
+    padding-left: 17px;
+    text-align: left;
+}
+.zc-order-table td{
+	position: relative;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #e9ebee;
+}
+.ol-carinfo{
+    position: relative;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #e9ebee;
+}
+.ol-carinfo b{
+	font-size: 14px;
+    color: #60606c;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.ol-carinfo p{
+	font-size: 12px;
+    color: #93939e;
+}
+.zc-order-place{
+    cursor: default;
+    border-left: 1px dotted #e9ebee;
+    border-right: 1px dotted #e9ebee;
+    min-height: 100px;
+    padding: 0 20px;
+}
+.zctooltipfetch{
+	margin: 0;
+	padding: 0;
+	display: block;
+	font-family: "微软雅黑";
+    position: relative;
+    font-size: 12px;
+    color: #60606c;
+    padding-left: 24px;
+}
+.zc_fetch_i{
+	position: absolute;
+    display: block;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon_2.png) -170px -235px no-repeat;
+}
+.qhtime{
+	font-family: "微软雅黑";
+	margin: 0px;
+	padding: 0px;
+	display: block;
+    font-size: 12px;
+    color: #93939e;
+    padding-left: 24px;
+    padding-bottom: 6px;
+}
+.zctooltipback{
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding: 0;
+	display: block;
+	font-family: "微软雅黑";
+    position: relative;
+    font-size: 12px;
+    color: #60606c;
+    padding-left: 24px;
+}
+.zc_giveback_i{
+	position: absolute;
+    display: block;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon_2.png) -170px -262px no-repeat;
+}
+.ol-aggregate{
+	font-family: "微软雅黑";
+	height: 102px;
+	border-right: 1px dotted #e9ebee;
+    line-height: 100px;
+    text-align: center;
+    font-size: 14px;
+    color: #60606c;
+}
+.ol-aggregate{
+	font-size: 18px;
+    line-height: 100px;
+    text-align: center;
+}
+.status-ac{
+	position: relative;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #e9ebee;
+}
+.s-gray{
+	font-family: "微软雅黑";
+    color: #93939e;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+.a-view{
+	display: block;
+	text-align: center;
+	font-size: 12px;
+    color: #6ab0ff;
+    line-height: 30px;
+    text-decoration: none;
+}
+/*foot*/
+.zc_main2{
+	width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+.zc-footmenu{
+	padding-top: 35px;
+	height: 100px;
+	background: #fff;
+	position: relative;
+	margin-top: 35px;
+    padding-bottom: 35px;
+}
+
+
+.wyd{
+	width: 150px;
+    padding-right: 150px;
+    float: left;
+    margin: 0;
+}
+.zc_main2 dt {
+	font-family: "微软雅黑";
+    font-size: 16px;
+    color: #60606c;
+    padding-bottom: 15px;
+    display: block;
+}
+.zc_main2 dd{
+	margin: 0;
+    padding: 0;
+}
+.zc-footmenu a{
+	font-family: "微软雅黑";
+	float: left;
+    min-width: 70px;
+    line-height: 14px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #93939e;
+    text-decoration: none;
+}
+.why{
+	margin: 0;
+	width: 100px;
+    padding-right: 140px;
+    float: left;
+}
+.wsj{
+	margin: 0;
+    width: 150px;
+    padding-right: 110px;
+    float: left;
+}
+.wfy{
+	margin: 0;
+	float: left;
+	width: 150px;
+}
+.wbz{
+	margin: 0;
+	float: right;
+    width: 150px;
+}
+.zc-footer{
+	display: block;
+	background: #1B2B3B;
+}
+.ainfor{
+	width: 100%;
+	float: left;
+	margin-top: 18px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	border-top: 1px solid #32414F;
+    
+}
+.ainfor a{
+	line-height: 14px;
+    margin-left: 90px;
+    float: left;
+    font-size: 12px;
+    color: #93939e;
+    cursor: pointer;
+    text-decoration: none;
+}
+.zc-copyright{
+	
+    padding-top: 18px;
+}
+.fl{
+	line-height: 20px ;
+	text-align: center;
+	font-size: 12px;
+    color: #93939e;
+}
+
+.pt10{
+    clear: both;
+}
+.sz_k{
+	margin-left: 550px;
+	display: inline-block;
+	margin-right: 50px;
+	background:url(../img/icon_new.png) 0 -192px no-repeat;
+	width: 89px;
+    height: 32px;
+}
+.sz_c{
+	display: inline-block;
+	background:url(../img/icon_new.png) 0 -153px no-repeat;
+	width: 89px;
+    height: 32px;	
+}
+/*个别样式特效*/
+.Ifo-dl a:hover{
+	color: #fabe00;
+    background-color: #fff8e8;
+}
+
+.zc-Ifo-RightBox2{
+	position: absolute;
+	
+	height: 513px;
+	width: 922px;
+    margin-left:278px;
+}
+/*修改密码的界面*/
+.modifyPas{
+	margin: 0;
+    padding: 0;
+}
+.modifyPas ul{
+	margin-top: 35px;
+	border-top: 1px solid #e9ebee;
+	list-style: none;
+    padding: 0;
+}
+.modifyPas li{
+	height: 59px;
+    border-bottom: 1px solid #e9ebee;
+}
+.modifyPas-beg{
+	font-family: "微软雅黑";
+    line-height: 59px;
+    width: 200px;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #60606c;
+    float: left;
+    cursor: default;
+}
+.ipt-passwordS{
+    border-radius: 0;
+    width: 298px;
+    padding: 9px 10px;
+    border-color: #e9ebee;
+    border-style: solid;
+    border-width: 1px;
+    height: 18px;
+    font: 14px/18px "Microsoft YaHei",SimSun,Tahoma,Verdana,Arial,sans-serif;
+    outline: 0;
+    color: #93939e;
+    vertical-align: middle;
+    background-color: #fff;
+}
+.modifyPas-Tip{
+	font-family: "微软雅黑";
+	float: right;
+    line-height: 59px;
+    padding-right: 15px;
+    color: #c6c6ce;
+    font-size: 14px;
+}
+.graybutbox{
+	padding: 20px 20px 20px 300px;
+    background-color: #f8f8fa;
+    margin-top: 10px;
+}
+.Ifo-sbm-but{
+	font-family: "微软雅黑";
+    padding: 0 10px;
+	display: inline-block;
+    text-decoration: none;
+    min-width: 130px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 2px;
+    height: 42px;
+    line-height: 42px;
+    background-color: #f3b900;
+    cursor: pointer;
+    border: 0;
+}
+.Ifo-sbm-but:hover{
+	background-color: #ff8650;
+}
+/*修改密码界面结束*/
+/*分页功能CSS样式*/
+.Ifo-fenye{
+    width: 822px;
+    padding: 15px 20px;
+}
+.Ifo-fenyeMain{
+    letter-spacing:1em;
+    text-align: center;
+}
+.Ifo-fenyeMain a{
+    display: inline-block;
+    text-indent: 1em;
+    font-size: 16px;
+    color: #93939e;
+    text-decoration: none;
+}
+.Ifo-fenyeMain a:hover{
+    border: 1px solid #f3b900;
+    color: #ff8650;
+}
+#IfoChaMes input:hover{
+    cursor: pointer;
+    border-color:#ff8650 ;
+}
+#submitbut{
+    visibility: hidden;
+    margin-left: -158px;
+}

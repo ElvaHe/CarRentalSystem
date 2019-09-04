@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://admin.car_rental.com/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/navjs.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://admin.car_rental.com/js/orderModify.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/zzsc.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderManage.css"/>
+		<link rel="stylesheet" type="text/css" href="http://admin.car_rental.com/styles/orderModify.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<nav class="top-navbar">
+				<div class="navbar-header">
+					<a class="nav-brand" href="###">CarRental System</a>
+				</div>
+			     <ul class="navbar-right">
+			     	<li>
+			     		<a class="toggle">
+			     			<i class="fa-suer"></i>
+			     		</a>
+			     	</li>
+			     </ul>
+			</nav>
+		    <!-- 代码 开始 -->
+			<div class="subNavBox">
+				<div class="subNav currentDd currentDt" style="letter-spacing: 2.2em;">
+					公告栏
+				</div>
+				
+				<div class="subNav">用户信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/User/Homepage"><i>用户信息查看</i></a></li>
+					<li><a href="#"><i>修改用户信息</i></a></li>
+					<li><a href="#"><i>邮件集体分发</i></a></li>
+
+				</ul>
+				<div class="subNav">订单信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Order/OrderPage"><i>订单信息查询</i></a></li>
+					<li><a href="/Order/OrderManage"><i>进行订单操作</i></a></li>
+					<li><a href="/Order/orderModify"><i>修改订单信息</i></a></li>
+				</ul>
+				<div class="subNav">车辆信息管理模块</div>
+				<ul class="navContent">
+					<li><a href="/Car/CarAdd"><i>新增车辆信息</i></a></li>
+					<li><a href="/Car/CarPage"><i>查询车辆信息</i></a></li>
+					<li><a href="/Car/CarManage"><i>管理车辆信息</i></a></li>
+				</ul>
+				<div class="subNav">数据统计管理模块</div>
+				<ul class="navContent">
+						<li><a href="/Chart/ChartMoney"><i>订单总额统计</i></a></li>
+						<li><a href="#"><i>区域分布统计</i></a></li>
+						<li><a href="#"><i>车辆租售统计</i></a></li>
+				</ul>
+			</div>
+			<!-- 代码 结束 -->
+		    <div class="page-wrapper">
+		    	<div class="page-wrapper-main">
+		    		<h1>进行订单操作</h1>
+					<form  action="/Order/orderModify_action" id="formmodify" method="post">
+		    		<div class="orderMan-showIfo" style="height: 568px">
+		    			<ul>
+		    				<li class="orderMan-One" style="height:98px;">
+		    					<label class="orderMan-Ifoin1">车辆信息：</label>
+		    					<img src="http://static.zuchecdn.com/images/newversion/news/order/klz.jpg" width="166" height="97">
+		    				    <table border="0">
+		    				    	<tr>
+		    				    		<td class="td-1">品&nbsp;&nbsp;&nbsp;牌:</td>
+		    				    		<td class="td-2">{$Car['car_brand']}</td>
+		    				    		<td class="td-1">车&nbsp;&nbsp;&nbsp;系:</td>
+		    				    		<td class="td-2">{$Car['car_sort']}</td>
+		    				    	</tr>
+		    				    	<tr>
+		    				    		<td class="td-1">车门数:</td>
+		    				    		<td class="td-2">{$Car['car_door']}</td>
+		    				    		<td class="td-1">座位数:</td>
+		    				    		<td class="td-2">{$Car['car_seatnum']}</td>
+		    				    	</tr>
+		    				    	<tr>
+		    				    		<td class="td-1">价&nbsp;&nbsp;&nbsp;格:</td>
+		    				    		<td class="td-2" id="car_price">{$Car['car_price']}</td>
+		    				    		<td class="td-1">座&nbsp;&nbsp;&nbsp;椅:</td>
+		    				    		<td class="td-2">{$Car['car_seatsort']}</td>
+		    				    	</tr>
+		    				    </table>
+		    				</li>
+		    				<li class="orderMan-Two" style="height:60px;">
+		    					<label>订单时间：</label>
+		    					<i class="zc_fetch_i"></i>
+		    					<input class='timeModi' name="Order_FetchTime" type="date" id="fetchTime" value="{$Car['order_fetchtime']}"/>
+		    					<select class="hourModi"  name="Order_FetchHour" id="fetchHour">
+		    						<option value="{$Car['order_fetchhour']}" selected="selected">{$Car['order_fetchhour']}&nbsp;&nbsp;初始</option>
+		    						<option value="09:00">09:00</option>
+									<option value="10:00">10:00</option>
+									<option value="11:00">11:00</option>
+									<option value="12:00">12:00</option>
+									<option value="13:00">13:00</option>
+									<option value="14:00">14:00</option>
+									<option value="15:00">15:00</option>
+									<option value="16:00">16:00</option>
+									<option value="17:00">17:00</option>
+									<option value="18:00">18:00</option>
+									<option value="19:00">19:00</option>
+									<option value="20:00">20:00</option>
+								</select>
+		    					<i class="zc_giveback_iMo"></i>	
+		    					<input class='timeModi' type="date" id="backTime" name="Order_BackTime" value="{$Car['order_fetchtime']}" />
+		    					<select  id="backHour" class="hourModi"  name="Order_BackHour">
+		    						<option value="{$Car['order_backhour']}" selected="selected">{$Car['order_backhour']}&nbsp;&nbsp;初始</option>
+									<option value="09:00">09:00</option>
+									<option value="10:00">10:00</option>
+									<option value="11:00">11:00</option>
+									<option value="12:00">12:00</option>
+									<option value="13:00">13:00</option>
+									<option value="14:00">14:00</option>
+									<option value="15:00">15:00</option>
+									<option value="16:00">16:00</option>
+									<option value="17:00">17:00</option>
+									<option value="18:00">18:00</option>
+									<option value="19:00">19:00</option>
+									<option value="20:00">20:00</option>
+		    					</select>
+		    				</li>
+		    				<li class="orderMan-Three" style="height:60px;">
+		    					<label>订单地点：</label>
+		    					<i class="zc_fetch_i"></i>	
+		    					<select class="fetchPlaceModi" name="Order_FetchPlace">
+		    						<option value="{$Car['order_fetchplace']}" selected="selected" > {$Car['order_fetchplace']}&nbsp;&nbsp;&nbsp;初始</option>
+		    						<option value="华侨大学站">华侨大学站</option>
+									<option value="金山站">金山站</option>
+									<option value="莲坂北站">莲坂北站</option>
+		    					</select>
+		    					<i class="zc_giveback_iMo"></i>	
+		    					<select class="fetchPlaceModi" name="Order_BackPlace" >
+		    						<option value="{$Car['order_backplace']}" selected="selected" > {$Car['order_backplace']}&nbsp;&nbsp;&nbsp;初始</option>
+		    						<option value="华侨大学站">华侨大学站</option>
+									<option value="金山站">金山站</option>
+									<option value="莲坂北站">莲坂北站</option>
+		    					</select>
+		    				</li>
+		    				<li class="orderMan-Four" style="height:60px; ">
+		    					<label>订单编号：</label>
+		    					<input class="ordernum" value="{$Car['order_num']}" name="Order_Num" style="margin-top: 25px;background: none ;border: 0px;"/>
+		    					<label style="margin-left: 255px;">订单状态：</label>
+		    					<span class="ordernum">
+									<if condition="($Car['order_status'] eq 0)"> 订单已取消
+										<elseif condition="($Car['order_status'] eq 1)" />预定成功
+										<elseif condition="($Car['order_status'] eq 2)" />租赁中
+										<else /> 订单已完成
+									</if>
+								</span>
+		    				</li>
+							<li class="orderMan-Four" style="height:60px; ">
+								<label>租赁天数：</label>
+								<span class="ordernum" style="margin-top: 25px">
+									<input name="Order_Days" id="order_days"  value="{$Car['order_days']}" style="background: none ;border: 0px; width: 15px" />
+									天
+								</span>
+
+							</li>
+		    				<li class="orderMan-Five" style="height:200px; ">
+		    					<label>订单价格：</label>
+		    					<div class="orderMan-Five-One">
+		    					<span class="ordernum">车辆租赁费及门店服务费:<span id="order_door">
+									{$Car['order_days']*$Car['car_price']}
+								</span>元</span>
+		    					<span class="ordernum1">注释：日租价格×天数 = 车辆租赁费及门店服务费</span>
+		    					</div>
+		    					<div class="orderMan-Five-Two">
+		    					<span class="ordernum">基本保险费用:<span  id="order_baoxian">
+									{$Car['order_days']*40}
+								</span>元</span>
+		    					<span class="ordernum1" style="margin-left: 248px;">注释：40×天数 = 车基本保险费用</span>
+		    					</div>
+		    					<div class="orderMan-Five-Three">
+		    					<span class="ordernum">其它费用:35元</span>
+		    					<span class="ordernum1" style="margin-left: 273px;">注释：服务费用包括在内的其它费用</span>
+		    					</div>
+		    					<div class="orderMan-Five-Four">
+		    					<span class="ordernum2">总计：</span>
+		    					<input style="background: none ;border: 0px; width: 100px"  class="ordernum3" id="order_total"  name="Order_Total" value="{$Car['order_total']}">
+		    					</div>
+		    				</li>
+		    			</ul>  		    
+		    		</div>
+		    	 	<div class="orderModgraybutbox">
+		                <a href="javascript:void(0);"  id="remodify">确认修改</a>
+		                <a href="javascript:void(0);"  id="zcsave">返回查询界面</a>
+		            </div>
+					</form>
+		    	</div>	
+		    </div>
+		</div>
+	</body>
+</html>
